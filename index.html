@@ -498,6 +498,11 @@
       color: var(--success);
     }
 
+    .status-text.loading {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
     .empty-state {
       min-height: 320px;
       display: grid;
@@ -573,14 +578,16 @@
   </div>
 
   <script>
-    const GOOGLE_SCRIPT_URL = "";
-    const SAMPLE_COUNT = 50;
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxwLqPEMdT3MkF8-UweH0YLsKJVrTWay_48RZaNGSK0lfDQWG2XzFlhh6hjD3rEf-Bi/exec";
+    const VIDEO_BASE_PATH = "assets/videos";
 
-    const DATASETS = {
-      dq1: createSamples("data-quality-1", "Data Quality 검증 1"),
-      dq2: createSamples("data-quality-2", "Data Quality 검증 2"),
-      dq3: createSamples("data-quality-3", "Data Quality 검증 3")
+    const DATASET_CONFIG = {
+      dq1: { datasetId: "data-quality-1", title: "Data Quality 검증 1", jsonPath: "data/data-quality-1.json" },
+      dq2: { datasetId: "data-quality-2", title: "Data Quality 검증 2", jsonPath: "data/data-quality-2.json" },
+      dq3: { datasetId: "data-quality-3", title: "Data Quality 검증 3", jsonPath: "data/data-quality-3.json" }
     };
+
+    const DATASETS = {};
 
     const routes = [
       { id: "dq1", type: "data-quality", title: "Data Quality 검증 1", description: "샘플 세트 1" },
@@ -599,17 +606,74 @@
       reviewerEmail: localStorage.getItem("reviewerEmail") || ""
     };
 
-    function createSamples(datasetId, datasetTitle) {
-      return Array.from({ length: SAMPLE_COUNT }, (_, index) => {
+    async function loadDataset(routeId) {
+      if (DATASETS[routeId]) return DATASETS[routeId];
+
+      const config = DATASET_CONFIG[routeId];
+      if (!config) return [];
+
+      try {
+        const response = await fetch(config.jsonPath, { cache: "no-cache" });
+        if (!response.ok) throw new Error(`Could not load ${config.jsonPath}`);
+        const rawItems = await response.json();
+        DATASETS[routeId] = normalizeSamples(rawItems, config);
+      } catch (error) {
+        console.warn(error);
+        DATASETS[routeId] = createPlaceholderSamples(config);
+      }
+
+      return DATASETS[routeId];
+    }
+
+    function normalizeSamples(rawItems, config) {
+      return rawItems.map((item, index) => {
+        const sourceName = item.m1?.name || "";
+        const targetName = item.m2?.name || "";
+
+        return {
+          id: String(item.id || `${config.datasetId}-sample-${index + 1}`),
+          title: `Sample ${index + 1}`,
+          datasetId: config.datasetId,
+          datasetTitle: config.title,
+          sourceName,
+          targetName,
+          sourceDescription: item.m1?.org_des || "",
+          targetDescription: item.m2?.org_des || "",
+          sourceVideo: buildVideoPath(sourceName),
+          targetVideo: buildVideoPath(targetName),
+          instruction: item.instruction?.final || item.instruction?.detail || "",
+          instructionDetail: item.instruction?.detail || "",
+          instructionConfidence: item.instruction?.confidence ?? "",
+          mSim: item.m_sim ?? "",
+          tSim: item.t_sim ?? "",
+          raw: item
+        };
+      });
+    }
+
+    function buildVideoPath(motionName) {
+      return motionName ? `${VIDEO_BASE_PATH}/${motionName}_0.mp4` : "";
+    }
+
+    function createPlaceholderSamples(config) {
+      return Array.from({ length: 50 }, (_, index) => {
         const sampleNumber = index + 1;
         return {
-          id: `${datasetId}-sample-${String(sampleNumber).padStart(2, "0")}`,
+          id: `${config.datasetId}-placeholder-${sampleNumber}`,
           title: `Sample ${sampleNumber}`,
-          datasetId,
-          datasetTitle,
-          sourceVideo: `assets/${datasetId}/source_${String(sampleNumber).padStart(2, "0")}.mp4`,
-          targetVideo: `assets/${datasetId}/target_${String(sampleNumber).padStart(2, "0")}.mp4`,
-          instruction: "Replace this placeholder with the instruction from source motion to target motion."
+          datasetId: config.datasetId,
+          datasetTitle: config.title,
+          sourceName: "SOURCE_MOTION_NAME",
+          targetName: "TARGET_MOTION_NAME",
+          sourceDescription: "",
+          targetDescription: "",
+          sourceVideo: "",
+          targetVideo: "",
+          instruction: `Place ${config.jsonPath} in the repository to load real samples.`,
+          instructionDetail: "",
+          instructionConfidence: "",
+          mSim: "",
+          tSim: ""
         };
       });
     }
@@ -635,12 +699,20 @@
       location.hash = routeId === "home" ? "" : routeId;
     }
 
-    function resolveRoute() {
+    async function resolveRoute() {
       const routeId = location.hash.replace("#", "") || "home";
       state.routeId = routes.some((route) => route.id === routeId) ? routeId : "home";
       state.currentSampleIndex = 0;
       state.answers = state.routeId.startsWith("dq") ? loadAnswers(state.routeId) : {};
+      if (state.routeId.startsWith("dq")) {
+        renderLoading();
+        await loadDataset(state.routeId);
+      }
       render();
+    }
+
+    function renderLoading() {
+      document.getElementById("app").innerHTML = `<div class="empty-state"><div><h1>Loading samples...</h1><p>JSON data and motion paths are being prepared.</p></div></div>`;
     }
 
     function render() {
@@ -658,8 +730,6 @@
 
       const route = routes.find((item) => item.id === state.routeId);
       subtitle.textContent = route.title;
-      actions.innerHTML = `<button class="home-link" type="button" data-home>Home</button>`;
-      actions.querySelector("[data-home]").addEventListener("click", () => navigate("home"));
 
       if (route.type === "baseline") {
         app.innerHTML = `<div class="empty-state"><div><h1>${route.title}</h1><p>Baseline 평가 포맷을 받으면 이 영역에 같은 방식으로 연결할 수 있습니다.</p></div></div>`;
@@ -828,11 +898,12 @@
       const answer = state.answers[sample.id] || {};
 
       document.getElementById("sample-title").textContent = sample.title;
-      document.getElementById("sample-description").textContent = sample.datasetTitle;
-      document.getElementById("sample-index").textContent = `${state.currentSampleIndex + 1} / ${SAMPLE_COUNT}`;
+      document.getElementById("sample-description").textContent = `${sample.datasetTitle} · ${sample.sourceName} → ${sample.targetName}`;
+      document.getElementById("sample-index").textContent = `${state.currentSampleIndex + 1} / ${DATASETS[state.routeId].length}`;
       document.getElementById("instruction-text").textContent = sample.instruction;
-      renderVideo("source-video", sample.sourceVideo, "Source video file not found yet.");
-      renderVideo("target-video", sample.targetVideo, "Target video file not found yet.");
+      const sourceVideo = renderVideo("source-video", sample.sourceVideo, "Source video file not found yet.");
+      const targetVideo = renderVideo("target-video", sample.targetVideo, "Target video file not found yet.");
+      setupSyncedVideoLoop(sourceVideo, targetVideo);
 
       document.querySelectorAll("input[name='instructionQuality']").forEach((input) => {
         input.checked = answer.instructionQuality === input.value;
@@ -847,8 +918,12 @@
 
     function renderVideo(containerId, src, fallbackText) {
       const container = document.getElementById(containerId);
+      if (!src) {
+        container.innerHTML = `<div class="video-placeholder">${fallbackText}</div>`;
+        return null;
+      }
       container.innerHTML = `
-        <video controls preload="metadata">
+        <video controls muted playsinline preload="auto">
           <source src="${src}" type="video/mp4">
         </video>
       `;
@@ -856,6 +931,53 @@
       video.addEventListener("error", () => {
         container.innerHTML = `<div class="video-placeholder">${fallbackText}<br>${src}</div>`;
       }, { once: true });
+      return video;
+    }
+
+    function setupSyncedVideoLoop(sourceVideo, targetVideo) {
+      const videos = [sourceVideo, targetVideo].filter(Boolean);
+      if (videos.length === 0) return;
+
+      let endedCount = 0;
+
+      const safePlay = (video) => {
+        const playPromise = video.play();
+        if (playPromise) {
+          playPromise.catch(() => {
+            // Autoplay can still be blocked by some browsers; controls remain available.
+          });
+        }
+      };
+
+      const restartTogether = () => {
+        endedCount = 0;
+        videos.forEach((video) => {
+          video.currentTime = 0;
+        });
+        videos.forEach(safePlay);
+      };
+
+      videos.forEach((video) => {
+        video.addEventListener("ended", () => {
+          endedCount += 1;
+          if (endedCount === videos.length) {
+            restartTogether();
+          }
+        });
+
+        video.addEventListener("loadeddata", () => {
+          if (videos.every((item) => item.readyState >= 2)) {
+            videos.forEach((item) => {
+              item.currentTime = 0;
+            });
+            videos.forEach(safePlay);
+          }
+        }, { once: true });
+      });
+
+      if (videos.every((video) => video.readyState >= 2)) {
+        restartTogether();
+      }
     }
 
     function updateCurrentAnswer() {
@@ -880,10 +1002,22 @@
     function renderProgress() {
       const samples = DATASETS[state.routeId];
       const completed = samples.filter((sample) => isComplete(state.answers[sample.id])).length;
+      const allComplete = completed === samples.length;
       const percent = Math.round((completed / samples.length) * 100);
       document.getElementById("progress-count").textContent = `${completed} / ${samples.length} checked`;
       document.getElementById("progress-percent").textContent = `${percent}%`;
       document.getElementById("progress-fill").style.width = `${percent}%`;
+
+      const submitButton = document.getElementById("submit-button");
+      const status = document.getElementById("status-text");
+      if (submitButton) {
+        submitButton.disabled = !allComplete;
+        submitButton.title = allComplete ? "" : "Complete all samples before submitting.";
+      }
+      if (status && !allComplete && !status.classList.contains("loading")) {
+        status.className = "status-text";
+        status.textContent = `Submit is available after all ${samples.length} samples are checked.`;
+      }
 
       const list = document.getElementById("sample-list");
       list.innerHTML = samples.map((sample, index) => {
@@ -922,6 +1056,10 @@
         answers: samples.map((sample, index) => ({
           order: index + 1,
           sampleId: sample.id,
+          sourceName: sample.sourceName,
+          targetName: sample.targetName,
+          sourceDescription: sample.sourceDescription,
+          targetDescription: sample.targetDescription,
           sourceVideo: sample.sourceVideo,
           targetVideo: sample.targetVideo,
           instruction: sample.instruction,
@@ -937,6 +1075,14 @@
       const status = document.getElementById("status-text");
       const button = document.getElementById("submit-button");
       status.className = "status-text";
+
+      const samples = DATASETS[state.routeId];
+      const completed = samples.filter((sample) => isComplete(state.answers[sample.id])).length;
+      if (completed !== samples.length) {
+        status.textContent = `Please complete all samples before submitting. (${completed} / ${samples.length} checked)`;
+        status.classList.add("error");
+        return;
+      }
 
       state.reviewerName = document.getElementById("reviewer-name").value.trim();
       state.reviewerEmail = document.getElementById("reviewer-email").value.trim();
@@ -956,22 +1102,25 @@
       }
 
       button.disabled = true;
-      status.textContent = "Submitting...";
+      button.textContent = "Submitting...";
+      status.textContent = "Submitting to Google Sheet. Please wait...";
+      status.classList.add("loading");
 
       try {
-        const response = await fetch(GOOGLE_SCRIPT_URL, {
+        await fetch(GOOGLE_SCRIPT_URL, {
           method: "POST",
           mode: "no-cors",
           headers: { "Content-Type": "text/plain;charset=utf-8" },
           body: JSON.stringify(buildPayload())
         });
+        status.className = "status-text success";
         status.textContent = "Submitted. Google Sheet에서 결과를 확인해 주세요.";
-        status.classList.add("success");
       } catch (error) {
+        status.className = "status-text error";
         status.textContent = "Submit failed. 네트워크 또는 Apps Script 설정을 확인해 주세요.";
-        status.classList.add("error");
       } finally {
         button.disabled = false;
+        button.textContent = "Submit to Sheet";
       }
     }
 

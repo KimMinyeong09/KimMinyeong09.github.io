@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 4152,
+    "m1": {
+      "name": "G001T005A028R016",
+      "org_des": "first person and second person sit facing each other, raising first person's and second person's hands with elbows on the table, clasping each other's hands, and engaging in a wrist wrestling match. first person twists first person's and second person's hands to the left, winning the match and forcing second person's hand down."
+    },
+    "m2": {
+      "name": "G009T005A028R000",
+      "org_des": "first person and second person sit facing each other, extending first person's and second person's right hands to engage in an arm wrestling match. Eventually, second person overpowers first person, forcing first person's right hand down to the right side of first person's body."
+    },
+    "m_sim": 0.9293650984764099,
+    "t_sim": 0.8881973624229431,
+    "dist_diff": 0.019999999999999796,
+    "angle_diff_deg": 2.4590867963915533,
+    "instruction": {
+      "detail": "Keep both first person and second person seated facing each other at a table throughout the motion, and preserve the idea that they are engaged in a hand or arm wrestling contest using their right hands. Change the initial contact so that instead of both elbows being planted and the hands already clasped near the center, the two right arms extend slightly forward from the torso and then meet in a more upright arm‑wrestling grip between them, with elbows still roughly on the table but the hands positioned higher and more centered between their bodies. Remove the strong twisting of the joined hands toward the left side of first person’s body; instead, have the struggle remain mostly in a vertical plane, with the clasped right hands moving back and forth near the midline as they contest strength. Reverse the winner and the final direction of the motion: do not animate first person forcing second person’s hand down to the left; instead, gradually shift the advantage to second person so that second person’s right arm pushes the clasped hands toward first person’s right side. Animate first person’s upper body and right shoulder yielding to the pressure, allowing the joined hands to arc down toward the right side of first person’s body until first person’s right hand is pinned close to the tabletop or right side, clearly showing that second person has overpowered first person. Maintain natural, continuous motion and mirroring where possible in the torso, head, and non‑wrestling arms so that the only major changes from the source are the initial hand position, the absence of the leftward twist, and the final outcome and direction of the pin, which now favors second person and ends on first person’s right side.",
+      "confidence": 0.93,
+      "rationale": [
+        "Both descriptions specify a seated, face‑to‑face hand or arm wrestling interaction, so most of the body orientation and general interaction can be preserved.",
+        "The key differences are who wins, the final direction of the pin, and the style of motion: the source twists left with first person winning, while the target has second person win and force first person’s right hand down toward first person’s right side, with a more classic arm‑wrestling trajectory."
+      ],
+      "final": "Change to upright arm‑wrestling grip, remove left twist, and have second person win pinning first person's hand to first person's right side."
+    }
+  },
+  {
+    "id": 1906,
+    "m1": {
+      "name": "G010T003A015R002_swap",
+      "org_des": "first person stands with first person's left foot extended, and second person walks up to first person and steps on first person's left foot by lifting second person's own left foot."
+    },
+    "m2": {
+      "name": "G049T004A015R005",
+      "org_des": "first person and second person stand facing each other. first person steps to the left and extends first person's right foot, stepping on second person's right foot. second person lifts second person's right foot, pushes first person's foot away, and steps to the right."
+    },
+    "m_sim": 0.9497835636138916,
+    "t_sim": 0.9744635224342346,
+    "dist_diff": 0.030000000000000027,
+    "angle_diff_deg": 1.679547660362882,
+    "instruction": {
+      "detail": "Keep both characters as in a two-person interaction, but change the overall setup so that the first person and second person begin standing facing each other rather than with the first person already extending the left foot. Remove the action where the second person walks up from a distance; instead, have both the first person and second person start already close enough to interact while facing each other. Change which character initiates the stepping action: instead of the second person stepping on the first person's left foot, make the first person be the one who steps onto the second person's foot. Change the stepping direction and foot choice for the first person: instead of simply standing with the left foot extended, have the first person first step their whole body toward their own left side, then extend and place the right foot forward and slightly across to land directly on top of the second person's right foot. Ensure that in this new motion the first person’s weight clearly shifts during the side step to the left, then partially onto the extended right foot as it presses down on the second person’s right foot. Update the second person’s reaction: remove the action where the second person lifts the left foot to step on the first person, and instead have the second person initially bearing weight on the right foot, then react to being stepped on by lifting that same right foot upward. Add a push-away action: as the second person lifts the right foot, they use that lifted right foot to push or nudge the first person’s right foot off and away from their own, making the separation of the feet clearly visible. After pushing the first person’s foot away, have the second person step their body to the right side, placing the right foot down to the right so that they move laterally away from the first person, while maintaining the facing orientation. Maintain the overall intent of a foot-stepping interaction, but emphasize the sequence: face each other, first person side-steps left and steps on the second person’s right foot with the first person’s right foot, second person lifts and uses the right foot to push the first person’s foot away, then the second person steps to the right to end the motion.",
+      "confidence": 0.95,
+      "rationale": [
+        "The target explicitly changes the initiator and direction of the step-on-foot action: in the source the second person walks up and steps on the first person’s left foot, while in the target the first person steps left and uses the right foot to step on the second person’s right foot.",
+        "The target adds a clear reaction sequence for the second person that does not exist in the source: lifting the right foot that was stepped on, pushing the first person’s foot away, and then stepping to the right, which must be described to correctly transform the motion while preserving the core foot-stepping interaction."
+      ],
+      "final": "Start both facing. First person side-steps left, steps on second person’s right foot, second person lifts and uses right foot to push away, then steps right."
+    }
+  },
+  {
+    "id": 9469,
+    "m1": {
+      "name": "G020T003A016R007",
+      "org_des": "first person and second person take a step forward, extending first person's and second person's hands to give each other a high five."
+    },
+    "m2": {
+      "name": "G020T003A016R009",
+      "org_des": "first person lifts first person's hand high in the air, while second person reaches out both hands to give first person a high-five."
+    },
+    "m_sim": 0.8584848642349243,
+    "t_sim": 0.6904115080833435,
+    "dist_diff": 0.10999999999999988,
+    "angle_diff_deg": 1.2024368442821742,
+    "instruction": {
+      "detail": "Preserve the overall setup where first person and second person face each other and approach to perform a high-five, but modify the way their arms and hands move and how close they get. Keep the initial stance and facing direction similar, with both people standing a short distance apart, but reduce or remove the forward stepping-in motion so that they mostly stay in place while preparing for the high-five. Change first person’s arm action so that instead of simply reaching forward to meet the other’s hand, first person lifts one hand straight up high above or slightly in front of the head, creating a clearly raised, overhead high-five target while keeping the rest of the body relatively upright and stable. Adjust second person’s motion so that instead of a single hand coming forward, second person now raises and extends both hands toward first person, reaching up and forward toward the elevated hand, as if enthusiastically trying to make contact with that higher target. Maintain the timing of the interaction so that both people still coordinate their motions toward a shared high-five moment, but the peak of the action should emphasize first person’s hand being noticeably higher than before and second person’s two-handed reaching gesture. Ensure body orientation and foot placement remain generally similar to the source motion so that the main change is the arm configuration and the reduced forward step, while the interaction type stays a friendly, cooperative high-five between the two people.",
+      "confidence": 0.86,
+      "rationale": [
+        "Both sequences depict a facing, cooperative high-five, but the target description emphasizes first person lifting the hand high and second person using both hands while stepping less toward each other.",
+        "The images suggest similar approach and spacing with the main visual differences in arm height and configuration, so the edit should focus on arm trajectories and slightly reduced forward motion while preserving the overall interaction and orientation."
+      ],
+      "final": "Remove big forward steps, raise first person’s hand overhead, have second person reach up with both hands."
+    }
+  },
+  {
+    "id": 1473,
+    "m1": {
+      "name": "G002T002A010R000",
+      "org_des": "first person and second person stand facing each other. first person extends first person's right hand and slaps second person's left cheek. second person then extends second person's right hand to cover second person's left cheek."
+    },
+    "m2": {
+      "name": "G054T002A010R001",
+      "org_des": "first person lifts first person's right hand and slaps second person's face. second person does the same, causing second person to move backward and first person to swing first person's body."
+    },
+    "m_sim": 0.9539374709129333,
+    "t_sim": 0.8498419523239136,
+    "dist_diff": 0.08999999999999997,
+    "angle_diff_deg": 3.3531832306934026,
+    "instruction": {
+      "detail": "Keep the overall setup where the first person and second person stand facing each other at a fixed distance and maintain their general body orientations and timing of the initial action. Modify the first person’s action so that instead of a quick slap specifically to the second person’s left cheek followed by withdrawal, the first person raises the right arm higher in front of the body, then delivers a more central slap to the second person’s face, allowing the torso and shoulders to rotate and the upper body to swing through with the strike before returning toward a neutral stance. Remove the reaction where the second person immediately lifts the right hand to cover the left cheek and instead have the second person briefly receive the first slap with the head and upper body staying mostly upright, with little or no guarding motion. After this, add a new retaliatory motion for the second person: the second person lifts the right arm in a similar path as the first person did, swings the right hand forward to slap the first person’s face, and lets this strike push the second person’s body slightly backward, shifting weight to the rear foot so the whole body moves a short distance away from the first person while staying generally facing them. During the second person’s slap, adjust the first person’s body so that the impact causes the first person to rotate and swing the upper body and shoulders in the direction of the hit, creating a visible follow-through of the torso rather than just a head reaction, while the feet remain roughly in place. Ensure the sequence flows smoothly from the first person’s slap, through a short pause, into the second person’s raised-hand retaliation and backward displacement, and end with both people facing each other again, separated by approximately the same distance as at the start but with the first person’s torso slightly twisted from the received slap.",
+      "confidence": 0.9,
+      "rationale": [
+        "Descriptions indicate that in the source the first person slaps only once and the second person’s main reaction is to raise a hand to cover the slapped cheek, while both remain mostly in place.",
+        "In the target, the first person still initiates with a slap but it is described more generally to the face with a body swing, and then the second person performs a similar slap back that drives them backward and makes the first person’s body swing, which matches the need to add a retaliatory slap, introduce body rotation and backward motion, and remove the cheek-covering reaction."
+      ],
+      "final": "Raise slap to center face, add swinging follow-through and retaliatory slap."
+    }
+  },
+  {
+    "id": 1678,
+    "m1": {
+      "name": "G046T001A005R002_swap",
+      "org_des": "first person and second person stand face to face, with first person lifting a foot to kick the calf of second person, while second person also lifts a foot to kick the calf of first person."
+    },
+    "m2": {
+      "name": "G058T001A005R004",
+      "org_des": "first person extends first person's right leg and kicks second person, causing second person to take a step back."
+    },
+    "m_sim": 0.9519230723381042,
+    "t_sim": 0.9031739830970764,
+    "dist_diff": 0.1100000000000001,
+    "angle_diff_deg": 0.36995409891677594,
+    "instruction": {
+      "detail": "Keep both first person and second person standing face to face at the start, but remove the simultaneous mutual calf kicking. Have only the first person initiate the action by clearly extending first person's right leg straight toward the second person in a more direct, impactful kick, instead of a short lift aimed at the calf. Emphasize that the first person’s kick lands solidly on the second person’s body in front, with the first person maintaining overall facing direction and balance on the supporting leg. Remove any motion where the second person lifts a leg to kick; instead, make the second person react to being kicked by shifting weight backward. After the impact, have the second person take a clear step back with one foot, moving the whole body backward while still generally facing the first person. Ensure the flow changes from a mirrored, mutual kicking pose to a single attacking kick by the first person followed by a defensive, retreating step by the second person, without additional counterattacks.",
+      "confidence": 0.93,
+      "rationale": [
+        "The source describes both people lifting a foot to kick each other’s calves simultaneously, while the target specifies only the first person kicks with the right leg and the second person reacts by stepping back.",
+        "The target keeps the interaction as a kick but changes the effect so that the kick causes a backward step, which requires removing the second person’s kicking motion and adding a reactive retreat instead."
+      ],
+      "final": "Remove mutual calf kicks, first person delivers strong front kick, second person steps back."
+    }
+  },
+  {
+    "id": 5548,
+    "m1": {
+      "name": "G027T001A007R014",
+      "org_des": "first person pushes second person's back with both hands, causing second person to fall forward."
+    },
+    "m2": {
+      "name": "G034T002A007R012",
+      "org_des": "first person pushes second person's waist with both hands. second person covers second person's stomach with both hands and steps back."
+    },
+    "m_sim": 0.9161179661750793,
+    "t_sim": 0.6982664465904236,
+    "dist_diff": 0.15999999999999992,
+    "angle_diff_deg": 1.8509726680582983,
+    "instruction": {
+      "detail": "Keep the initial facing directions, spacing, and overall timing similar, with the first person in front of the second person. Modify the push so that, instead of placing both hands high on the second person’s upper back and driving them forcefully forward, the first person brings both hands lower to the second person’s waist or stomach area and delivers a more controlled push directed into the torso rather than into the upper back. Reduce the forward impulse on the second person so they do not topple or fall to the ground; remove the large forward fall and any bending all the way down. After the push, have the second person react by quickly bringing both of their own hands to cover their stomach or waist where they were pushed, curling their upper body slightly around that area instead of flailing forward. At the same time, change the second person’s locomotion response from a forward stumble into a small retreat: they step one or more times backward away from the first person while shielding their stomach, maintaining an upright posture. End the motion with both people still standing and relatively close together, the first person returning to a neutral standing pose after the push, and the second person standing a short distance back from their original spot, hands still near their stomach, rather than lying or leaning forward on the ground.",
+      "confidence": 0.9,
+      "rationale": [
+        "The descriptions state that the source push is on the back and causes a forward fall, while the target push is on the waist and leads to the second person stepping back and covering their stomach",
+        "The sequence images show in the source a strong forward knockdown of the second person, while in the target they stay upright and end up slightly behind their initial position, which supports modifying the push intensity, contact point, and reaction accordingly"
+      ],
+      "final": "Lower the push to the waist, soften impact, second person shields stomach and steps back."
+    }
+  },
+  {
+    "id": 6774,
+    "m1": {
+      "name": "G023T000A003R020",
+      "org_des": "first person grabs second person's left hand using both of first person's hands."
+    },
+    "m2": {
+      "name": "G030T001A003R003_swap",
+      "org_des": "first person takes a step forward, approaches second person, and extends both hands to grab second person's right arm, pulling second person towards first person."
+    },
+    "m_sim": 0.9027395844459534,
+    "t_sim": 0.9107475876808167,
+    "dist_diff": 0.15999999999999992,
+    "angle_diff_deg": 4.810689344890299,
+    "instruction": {
+      "detail": "Modify the motion so that the first person does not immediately stand close and grab the second person’s left hand. Instead, start with the first person positioned slightly farther away from the second person, facing them. Have the first person take a clear step forward toward the second person, using this step as an approach motion before any contact happens. Their body should lean slightly forward in an intent-to-engage manner as they close the distance. As the first person finishes stepping in, change the target of the grab from the second person’s left hand to the second person’s right arm. The first person should extend both arms forward toward the second person’s right arm rather than downward toward the hand. Adjust the hand placement so that both of the first person’s hands wrap around the second person’s right arm at about forearm or upper-arm level, instead of clasping the left hand. Maintain a firm, two-handed grip that clearly indicates control of the arm rather than a hand-holding gesture. After the first person secures the grip on the second person’s right arm, add a pulling action: have the first person draw their arms and upper body slightly backward, using their whole body to pull the second person toward them. The second person’s upper body should respond by being pulled a bit forward in the direction of the first person. Ensure the overall flow changes from a static in-place grab to a short approach-then-grab sequence, with the key behavioral intent shifting from simply holding the second person’s hand to actively taking hold of their right arm and pulling them closer.",
+      "confidence": 0.94,
+      "rationale": [
+        "The target explicitly introduces an approach step forward before contact, which is absent in the source, so adding a forward step and approach motion is necessary.",
+        "The point of contact changes from grabbing the second person's left hand with both hands to grabbing the second person's right arm with both hands and then pulling, so the instruction needs to move the contact location, adjust hand placement and add a pulling action while keeping the general grab interaction type consistent."
+      ],
+      "final": "Add a step-in, then grab and pull the right arm"
+    }
+  },
+  {
+    "id": 871,
+    "m1": {
+      "name": "G002T004A024R020",
+      "org_des": "first person and second person stand facing each other.   first person steps forward and bows to second person."
+    },
+    "m2": {
+      "name": "G049T005A024R021",
+      "org_des": "first person and second person stand facing each other, and then first person kneels down and bows to second person."
+    },
+    "m_sim": 0.9613156914710999,
+    "t_sim": 0.831592857837677,
+    "dist_diff": 0.18000000000000005,
+    "angle_diff_deg": 1.8471798285980574,
+    "instruction": {
+      "detail": "Keep the initial setup where the first person and second person stand facing each other at a short distance with neutral upright postures and minimal movement from the second person. Preserve the overall timing, facing direction, and interpersonal distance of the interaction, and keep the first person’s final gesture directed toward the second person as a respectful bow. Modify the first person’s movement so that, instead of only stepping slightly forward and bending at the waist, the first person transitions into a kneeling position before bowing. As the motion begins, let the first person take a small step or two forward similar to the source, then have them lower their center of gravity by bending both knees and bringing one or both knees down to the ground while still facing the second person. Ensure the torso remains relatively upright during the descent, with the head and gaze maintained toward the second person, and the arms staying in a natural position at the sides or slightly in front of the body until the kneeling position is reached. Once the first person is kneeling stably on the ground, have them execute the bow by hinging the torso forward more deeply from the hips while keeping the knees on the ground, so that the upper body leans toward the second person in a clear kneeling bow. After the deepest point of the kneeling bow, have the first person return their torso to an upright kneeling posture while remaining on the knees, instead of standing back up as in the source, and keep the second person mostly still and observing throughout the entire sequence.",
+      "confidence": 0.88,
+      "rationale": [
+        "Descriptions specify that both motions start with the two people facing each other, but the source only has the first person step forward and bow while standing, whereas the target explicitly requires the first person to kneel down and then bow.",
+        "The sequence images show the same initial facing and similar bowing gesture, with the major difference being the amount of lowering of the first person’s body, supporting an edit focused on adding a controlled descent to a kneeling posture before the bow while preserving interaction and orientation."
+      ],
+      "final": "Change first person’s bow into a deep kneeling bow."
+    }
+  },
+  {
+    "id": 1276,
+    "m1": {
+      "name": "G033T001A005R002",
+      "org_des": "first person lifts first person's right foot and kicks second person's left calf with first person's right foot."
+    },
+    "m2": {
+      "name": "G034T002A005R002",
+      "org_des": "first person kicks second person with first person's right foot, and second person takes a few steps back."
+    },
+    "m_sim": 0.9561708569526672,
+    "t_sim": 0.9927183389663696,
+    "dist_diff": 0.17000000000000015,
+    "angle_diff_deg": 2.570336634860442,
+    "instruction": {
+      "detail": "Keep the overall setup, timing, and style of the first person kicking with the right foot, but modify the outcome of the interaction so that the second person reacts by retreating instead of mostly staying in place. Maintain the first person’s approach and preparation for the kick as in the source, with the torso facing the second person and the right leg lifting and extending toward the second person to deliver the kick at roughly the same moment and to a similar area of the second person’s body. After the kick lands, keep the first person largely in their finishing stance with weight settling back onto the supporting leg and only minimal displacement, but ensure they do not advance further toward the second person. Change the second person’s response: instead of absorbing the kick with a small adjustment, have the second person clearly yield to the impact by stepping backward several times along the same forward–backward line between them. Right after contact, rotate and shift the second person’s upper body slightly away from the first person to suggest being pushed back, then move their center of mass rearward so their whole body translates backward. Animate the second person taking multiple retreating steps, first quickly then easing to a stop, while keeping their orientation generally facing the first person, with their feet landing behind their original position and the distance between the two people noticeably increasing by the end of the sequence. Ensure that the timing emphasizes cause and effect: the backward steps of the second person start immediately after the first person’s right foot makes contact and continue while the first person is finishing the kick and settling into the final stance.",
+      "confidence": 0.9,
+      "rationale": [
+        "Both descriptions specify the same basic action by the first person, a right-foot kick to the second person, so the main change is in the second person’s reaction.",
+        "The target description explicitly adds that the second person takes a few steps back, and the target sequence shows the distance between the characters increasing over time while their orientation remains similar, supporting instructions that add backward retreat steps and increased separation after impact."
+      ],
+      "final": "Make second person stagger several steps straight back after the kick."
+    }
+  },
+  {
+    "id": 716,
+    "m1": {
+      "name": "G036T000A002R012",
+      "org_des": "first person waves first person's hands to second person, and second person waves second person's left hand to first person."
+    },
+    "m2": {
+      "name": "G038T000A002R015",
+      "org_des": "first person and second person face each other, with first person raising first person's hands above first person's head and waving to second person. In response, second person also raises second person's hands above second person's head and waves back."
+    },
+    "m_sim": 0.9637697339057922,
+    "t_sim": 0.8937138319015503,
+    "dist_diff": 0.19999999999999973,
+    "angle_diff_deg": 1.7226676266497083,
+    "instruction": {
+      "detail": "Keep the overall setup with first person and second person standing opposite each other and preserve the timing and cyclic nature of the waving interaction. Modify the upper body actions so that throughout the waving, both characters raise both arms up above their heads instead of using a single hand at about chest or shoulder height. For the first person, change the initial gesture from waving primarily with the hands in front of the torso to lifting both arms straight or slightly bent upward until the hands are clearly above the head, then perform the waving motion from this overhead position by oscillating both forearms and hands side to side while the rest of the body remains largely stable. For the second person, delay and mirror the response as in the source, but alter it so that when the second person starts to wave back, both of second person’s arms also rise above the head and the waving is done from that elevated position, matching the first person’s rhythm and facing direction. Maintain their facing orientation toward each other, with minimal or no change in lower body stance and no large stepping or repositioning, focusing the edit on changing the height and involvement of the arms so the interaction becomes a mutual overhead two‑handed wave instead of the original lower, mostly one‑handed wave.",
+      "confidence": 0.93,
+      "rationale": [
+        "Both descriptions and images show a waving interaction with similar facing and spacing, but the target specifies that each person raises both hands above the head while the source mainly uses hands at a lower height with one hand emphasized.",
+        "The sequences indicate that the interaction type and response timing remain a wave and reply, so the main edit is to adjust arm usage and height while preserving stance, orientation, and reciprocal timing."
+      ],
+      "final": "Change to a mutual overhead two‑handed wave while facing each other."
+    }
+  },
+  {
+    "id": 3771,
+    "m1": {
+      "name": "G022T008A029R016_swap",
+      "org_des": "first person and second person sit facing each other, first person puts first person's arms in front of first person, and second person waves second person's hands while chatting with first person."
+    },
+    "m2": {
+      "name": "G042T006A029R024",
+      "org_des": "first person and second person are seated across from one another in chairs, engaged in conversation. first person's right hand rests upon the table, while second person props second person's face up with second person's left hand, and second person's right hand also rests upon the table."
+    },
+    "m_sim": 0.9330170750617981,
+    "t_sim": 0.9474281072616577,
+    "dist_diff": 0.1499999999999999,
+    "angle_diff_deg": 1.5648338095842464,
+    "instruction": {
+      "detail": "Keep first person and second person seated facing each other and maintain the chatting interaction throughout, but remove the action where first person puts first person's arms in front of first person and second person waves second person's hands. Place both characters on chairs rather than any other seating, and ensure they remain sitting across from one another as they converse. Repose first person so that instead of extending both arms forward, first person's right hand is relaxed and resting naturally on the table surface in front of first person, while the rest of first person's body stays generally still and oriented toward second person during the conversation. Repose second person so that second person is no longer waving their hands; instead, second person uses their left hand to support or prop up second person's face or chin, with the left elbow or forearm resting on or near the table in a stable, idle pose. Set second person's right hand to also rest on the table in a relaxed, stationary position, avoiding any waving or large gesturing, while second person continues to face and engage with first person. Overall, reduce large arm and hand motions from both participants so their upper bodies appear more relaxed and mostly static, conveying a calm, engaged conversation with subtle head and body movements rather than expressive hand waving.",
+      "confidence": 0.93,
+      "rationale": [
+        "The source describes active arm movement with first person putting arms forward and second person waving hands, while the target describes a more static pose with hands resting on a table and one hand propping up the face, so the instruction focuses on removing the dynamic waving and replacing it with resting and supporting poses.",
+        "Both source and target maintain a chatting interaction with the two people facing each other while seated, so the main changes involve seating on chairs, adding the presence of a table, and adjusting specific hand and arm placements to match the target description while preserving the conversational context."
+      ],
+      "final": "Seat both on chairs, stop arm waving, rest hands on table"
+    }
+  },
+  {
+    "id": 5956,
+    "m1": {
+      "name": "G002T004A023R013_swap",
+      "org_des": "first person and second person stand side by side, with first person extending first person's right hand to wrap around second person's shoulder. Simultaneously, second person places second person's right hand on top of first person's right hand. first person and second person proceed to walk forward together."
+    },
+    "m2": {
+      "name": "G048T004A023R016",
+      "org_des": "first person and second person stand in the same direction. first person extends first person's right hand to second person's right shoulder. second person stretches out second person's right hand and places it on second person's chest. Together, first person and second person take a few steps forward."
+    },
+    "m_sim": 0.9119163751602173,
+    "t_sim": 0.9623137712478638,
+    "dist_diff": 0.16999999999999998,
+    "angle_diff_deg": 3.058103386760353,
+    "instruction": {
+      "detail": "Keep first person and second person standing side by side facing the same direction at the start, maintaining the overall shoulder to shoulder spatial relationship. Modify first person’s right arm action so that instead of wrapping the right arm around second person’s shoulders, first person simply extends the right hand forward and places it on or near second person’s right shoulder from the side, creating more of a light touch than an encircling hold. Change second person’s right arm action so that instead of lifting the right hand to rest on top of first person’s right hand at the shoulder level, second person stretches second person’s right arm slightly forward and inward toward their own torso and places the right hand flat or gently on second person’s own chest. Ensure that the contact pattern reflects these new placements: first person’s right hand makes contact with second person’s right shoulder, and second person’s right hand makes contact with second person’s own chest, with no stacking of hands at the shoulder as in the source motion. Preserve the mutual facing direction and overall relaxed, cooperative walking intent, but adjust the initial pose so that both individuals are aligned in the same walking direction before moving. Retain the forward walking movement for both first person and second person, but shorten or soften the walking sequence so they only take a few deliberate steps forward together rather than proceeding into an extended walk. Maintain the shoulder to shoulder proximity while walking, but remove any body rotation or leaning that would be needed for first person to keep an arm wrapped around second person, since the contact is now a more limited hand on shoulder and hand on chest configuration.",
+      "confidence": 0.93,
+      "rationale": [
+        "Both source and target explicitly describe a shoulder to shoulder configuration and forward walking, so overall alignment and joint forward motion should be preserved while adjusting local arm and hand interactions.",
+        "The main structural differences are that first person’s right arm changes from wrapping around second person’s shoulders to simply extending to second person’s right shoulder, and second person’s right hand changes from resting on top of first person’s right hand to instead resting on their own chest, plus the target specifies only a few steps rather than an ongoing walk."
+      ],
+      "final": "Change to light hand-on-shoulder touch, second person hand-on-chest, fewer steps."
+    }
+  },
+  {
+    "id": 3922,
+    "m1": {
+      "name": "G007T004A023R013",
+      "org_des": "first person stands and reaches first person's right hand around the back of second person, placing first person's right hand on second person's right shoulder. second person is embraced by first person, and first person and second person walk forward together for a few steps."
+    },
+    "m2": {
+      "name": "G043T005A023R015",
+      "org_des": "first person and second person stand side by side, and first person embraces second person's shoulder with first person's right hand, and first person and second person move forward together."
+    },
+    "m_sim": 0.9315758943557739,
+    "t_sim": 0.8890345692634583,
+    "dist_diff": 0.09000000000000002,
+    "angle_diff_deg": 1.4662653756232533,
+    "instruction": {
+      "detail": "Preserve the overall situation that the first person and second person are walking forward together with the first person’s right arm around the second person’s shoulder, and keep the global walking speed and step size similar to the source. Adjust the initial spacing so that from the very start both people stand closer side by side, rather than with any offset or gap, so their shoulders are clearly aligned next to each other. Maintain the first person on the same side relative to the second person as in the source, but slightly straighten and center both torsos so they face more directly forward instead of being subtly angled toward or away from each other. Keep the first person’s right arm wrapped around the back of the second person’s upper body, but refine the contact so the hand and forearm rest more naturally on the top of the second person’s right shoulder, emphasizing a relaxed shoulder-to-shoulder embrace rather than a tighter wrap. Ensure the second person’s arms and upper body remain mostly relaxed and forward facing, without large counter-rotations, so the pose reads as two people walking side by side rather than one person strongly leading the other. As they move forward, maintain a consistent side‑by‑side alignment between their hips and shoulders, minimizing any drift where one person moves significantly ahead or behind. Extend the walking sequence so that, after the initial embraced walk, both people continue taking several additional synchronized steps forward while staying in this side‑by‑side, shoulder‑to‑shoulder configuration, ending with both still upright and facing forward together.",
+      "confidence": 0.87,
+      "rationale": [
+        "Both descriptions specify a shoulder-to-shoulder embrace with the first person’s right arm around the second person as they walk forward together, so the core interaction and walking motion should be preserved.",
+        "The target sequence is longer and shows a more prolonged, even side-by-side walk with consistent alignment and a slightly more forward-facing, relaxed pose, motivating instructions about closer shoulder alignment, torso orientation, and extending the walk duration while keeping the fundamental contact the same."
+      ],
+      "final": "Align both characters side by side, relax embrace, extend synchronized walking"
+    }
+  },
+  {
+    "id": 7786,
+    "m1": {
+      "name": "G030T001A004R006",
+      "org_des": "first person and second person stand facing each other. first person hits second person on the left shoulder with first person's right fist, and second person steps back."
+    },
+    "m2": {
+      "name": "G037T000A004R021_swap",
+      "org_des": "first person and second person stand facing each other. first person uses first person's right hand to make a fist and punches second person's left shoulder. Then, second person raises second person's left hand to block the punch and takes a few steps back."
+    },
+    "m_sim": 0.8879580497741699,
+    "t_sim": 0.8193590044975281,
+    "dist_diff": 0.1100000000000001,
+    "angle_diff_deg": 0.031126867157341583,
+    "instruction": {
+      "detail": "Keep the initial setup where first person and second person stand facing each other. Maintain that first person uses first person's right hand to form a fist and directs a punch toward second person's left shoulder, preserving the general punching direction and target area from the source. Adjust the interaction so that, just before the punch would land, second person actively raises second person's left forearm and hand up in front of the left shoulder in a blocking pose, intercepting or deflecting first person's right fist instead of passively receiving the hit. Ensure the timing of the block is slightly anticipatory or nearly simultaneous with the incoming punch, so the contact is perceived as a defended hit rather than an unopposed strike. After the block, extend second person's retreat so that instead of taking only a single step back, second person takes a few consecutive steps backward, showing a more pronounced withdrawal while remaining generally facing first person. Keep first person mostly in place after the punch, with only natural follow-through from the punching arm, and do not add extra attacks or movements that are not described. Overall, preserve the facing orientation and the basic right-hand punch to the left shoulder, but modify second person's reaction from a simple hit and one step back into an active left-hand block followed by multiple backward steps.",
+      "confidence": 0.95,
+      "rationale": [
+        "Both source and target describe first person standing facing second person and striking second person's left shoulder with first person's right fist, so the basic stance, orientation, and strike direction should be preserved.",
+        "The key differences are that in the target motion the second person raises the left hand to block the punch and then takes a few steps back instead of just stepping back once, so the edit must add a defensive block and extend the backward retreat while keeping the rest of the motion similar."
+      ],
+      "final": "Add second person left-hand block, then multiple retreating steps backward."
+    }
+  },
+  {
+    "id": 1634,
+    "m1": {
+      "name": "G027T003A018R012",
+      "org_des": "first person, who is standing, raises both hands and speaks near second person's ear, but second person, who is sitting, blocks it with both hands."
+    },
+    "m2": {
+      "name": "G043T003A018R021_swap",
+      "org_des": "first person occupies a seat while second person moves towards first person's left, positions both of second person's hands near second person's mouth, leans in close to first person's left ear, and speaks softly."
+    },
+    "m_sim": 0.9523095488548279,
+    "t_sim": 0.8497774004936218,
+    "dist_diff": 0.09000000000000008,
+    "angle_diff_deg": 1.9178059946137018,
+    "instruction": {
+      "detail": "Change the scene so that both people are seated from the start instead of the first person standing and the second person sitting. Keep the overall context of a quiet whisper in the ear, but remove the blocking reaction: the second person should no longer raise their hands to block the whisper. Reposition the first person so they are clearly occupying a seat, sitting in a stable, relaxed posture facing generally forward. Have the second person start at some distance from the first person, then move toward the first person’s left side instead of staying in place. As the second person approaches, adjust their path so that they end up close to the first person’s left ear, slightly angled toward the first person’s left side rather than directly in front. During this approach, animate the second person bringing both of their hands up from a neutral or lowered position to be held near their own mouth, instead of using their hands to block the first person’s whisper. Refine the second person’s upper body so that, near the end of the motion, they lean their torso forward and inward toward the first person’s left ear, clearly indicating an intentional, gentle whispering posture. Ensure the first person no longer raises their hands to speak into the second person’s ear; instead, keep the first person mostly passive and seated, with only minor natural adjustments such as a slight head turn or subtle lean toward the incoming whisper on their left side. At the final moment, have the second person’s mouth close to the first person’s left ear, hands still near their own mouth, with soft, small mouth movements suggesting a quiet, intimate whisper. Maintain smooth, continuous motion throughout, transitioning from initial seated positions, to the second person’s approach, to the lean and whisper, without any abrupt blocking or defensive gestures.",
+      "confidence": 0.93,
+      "rationale": [
+        "The source describes the first person standing, raising hands, and speaking near the second person’s ear, while the seated second person blocks with both hands; the target instead has the first person seated, the second person moving to the first person’s left, bringing hands near their own mouth, leaning in, and whispering softly.",
+        "The interaction type (whisper in ear) remains the same, but the roles, postures, and hand usages change, so the instruction emphasizes converting from a blocked, defensive interaction with the first person active to a cooperative, intimate whisper with the second person approaching, leaning in, and using their hands near their mouth rather than to block."
+      ],
+      "final": "Make both seated, keep first person passive, second person approaches left side, hands near mouth, leans in to whisper instead of blocking."
+    }
+  },
+  {
+    "id": 731,
+    "m1": {
+      "name": "G050T000A001R006",
+      "org_des": "first person raises first person's left hand, and second person raises second person's left hand and shakes it."
+    },
+    "m2": {
+      "name": "G050T000A001R008",
+      "org_des": "first person raises first person's left hand, and second person raises both hands to shake first person's hand."
+    },
+    "m_sim": 0.9635411500930786,
+    "t_sim": 0.8914909362792969,
+    "dist_diff": 0.009999999999999898,
+    "angle_diff_deg": 2.2416479530228925,
+    "instruction": {
+      "detail": "Keep the overall timing, standing positions, and facing direction of both people the same as in the source, and preserve the basic handshake interaction between them. Maintain the first person’s motion as is: the first person simply raises the left hand toward the second person and holds it in a handshake-ready posture without adding extra body movement. Modify the second person’s upper body motion so that instead of only lifting and using the left hand, the second person raises both hands up toward the first person as the handshake begins. Coordinate the two hands of the second person so that one hand continues to meet and shake the first person’s raised left hand as in the source, while the other hand is lifted to about the same height and remains near the handshake, contributing to a two-handed gesture without breaking the rhythm of the original shake. Ensure the shaking action and contact point between the first person’s left hand and one of the second person’s hands stay consistent with the source, while the additional hand movement from the second person appears as a natural extension of the same interaction rather than a separate action.",
+      "confidence": 0.9,
+      "rationale": [
+        "Descriptions state that in the source only the second person’s left hand is raised and shaking, while in the target the second person raises both hands to shake the first person’s hand.",
+        "The sequence images show a similar standing posture, facing direction, and timing, with the main difference being the involvement of both of the second person’s hands in the target motion."
+      ],
+      "final": "Change second person to raise both hands for a two-handed handshake."
+    }
+  },
+  {
+    "id": 1063,
+    "m1": {
+      "name": "G005T005A027R009",
+      "org_des": "first person is partially crouched to the left while second person sits, reaching out to pat second person's left thigh."
+    },
+    "m2": {
+      "name": "G059T004A027R018_swap",
+      "org_des": "first person, standing, gives second person, who is seated, a thorough leg massage."
+    },
+    "m_sim": 0.9585952758789062,
+    "t_sim": 0.8083003163337708,
+    "dist_diff": 0.06000000000000005,
+    "angle_diff_deg": 3.6006958118505312,
+    "instruction": {
+      "detail": "Keep the second person seated throughout, but transform the first person from a partially crouched posture into a stable, upright standing posture positioned beside the second person’s leg. Adjust the first person’s lower body so their legs are straight or only slightly bent, feet firmly planted on the ground, with their torso upright and oriented toward the second person’s legs instead of leaning off to the left. Replace the brief patting motion on the second person’s left thigh with a continuous, thorough leg massage that covers more of the leg from upper thigh down toward the lower leg. Have the first person use both hands in cyclical, massaging motions such as kneading, rubbing, and pressing along the second person’s leg, rather than quick, light pats in one spot. Extend the overall duration and rhythm of the interaction so the first person maintains consistent, repeated massage motions along the leg, creating a steady, attentive flow instead of a short, single pat. Ensure the first person’s upper body and shoulders move subtly with the massage, leaning slightly in and out as they work along the leg, while maintaining balance in the standing posture. Maintain the close, focused interaction between the two, but emphasize the intent of giving a deliberate, careful leg massage instead of a casual thigh pat.",
+      "confidence": 0.9,
+      "rationale": [
+        "The target explicitly changes the first person from partially crouched to standing while keeping the second person seated, so posture and lower-body adjustments for the first person are required.",
+        "The interaction remains leg-focused but shifts from a brief pat on the thigh to a thorough leg massage, implying extended duration, larger coverage along the leg, use of both hands, and continuous, rhythmic motions."
+      ],
+      "final": "Make first person stand and give a continuous, two-handed leg massage."
+    }
+  },
+  {
+    "id": 2197,
+    "m1": {
+      "name": "G044T007A039R023",
+      "org_des": "first person and second person stand facing each other. first person raises first person's right hand and first person and second person both fly towards each other. first person and second person reach out and kiss each other."
+    },
+    "m2": {
+      "name": "G054T008A039R022_swap",
+      "org_des": "first person and second person stand face to face, with first person throwing two kisses towards second person before walking towards second person, while second person waves second person's hands."
+    },
+    "m_sim": 0.947256326675415,
+    "t_sim": 0.8903478980064392,
+    "dist_diff": 0.040000000000000036,
+    "angle_diff_deg": 2.4774056284217973,
+    "instruction": {
+      "detail": "Keep the beginning with first person and second person standing face to face, but remove the flying motion toward each other and the final physical kiss. Instead of first person raising only first person's right hand to initiate flight, have first person stay in place and perform two clear fly kisses toward second person: first person briefly brings first person's hand toward the mouth or makes a kissing gesture, then extends the hand outward as if throwing a kiss, and repeats this fly kiss gesture a second time, maintaining a forward-facing orientation toward second person. While first person is throwing the two kisses, keep second person standing in place facing first person, but change second person's response so that second person does not move forward or lean in to kiss; instead, have second person repeatedly wave second person's hands in a friendly, receptive manner toward first person. After the two fly kisses are completed, have first person transition into a natural walk toward second person rather than flying, with smooth forward steps and an upright posture, still oriented toward second person, and do not transition into a mutual reaching and kissing pose at the end. Overall, remove any midair motion and close-contact kissing interaction, and replace it with a grounded, playful exchange where first person throws two kisses from a short distance and then walks toward second person while second person stands and waves.",
+      "confidence": 0.94,
+      "rationale": [
+        "Source involves both characters flying toward each other and ending in a mutual physical kiss, while target specifies staying grounded, fly kisses from first person at a distance, and no explicit final kiss contact.",
+        "Target adds new behaviors not present in the source, namely first person throwing two kisses and then walking forward, and second person waving hands instead of moving forward to kiss, so the instruction must remove the flying and kissing contact and replace them with these specific, grounded actions."
+      ],
+      "final": "Remove flying and physical kiss, first person air-kisses twice, walks, second person waves."
+    }
+  },
+  {
+    "id": 4804,
+    "m1": {
+      "name": "G020T007A039R020",
+      "org_des": "first person blows a flying kiss to second person with both hands, and second person responds by blowing a flying kiss with one hand."
+    },
+    "m2": {
+      "name": "G045T009A039R022",
+      "org_des": "first person and second person stand facing each other. first person extends first person's right hand and kisses second person. second person also extends second person's right hand to kiss first person."
+    },
+    "m_sim": 0.9236999154090881,
+    "t_sim": 0.817355751991272,
+    "dist_diff": 0.10999999999999988,
+    "angle_diff_deg": 4.429110820120423,
+    "instruction": {
+      "detail": "Keep the overall timing, spacing in the scene, and mutual, friendly interaction between the two people, but remove all blowing‑a‑kiss gestures and replace them with a close hand‑to‑hand kiss. Throughout the motion, keep both people mostly in place instead of stepping forward or backward, and orient them so they stand facing each other at a comfortable conversational distance. For the first person, replace the initial pose with arms relaxed or naturally at the sides, not lifted toward the mouth with both hands. Instead of bringing both hands up and blowing a flying kiss outward, have the first person extend only the right arm forward toward the second person at chest or shoulder height, with the right hand open or lightly cupped, as if offering the back of the hand to be kissed. The torso and head should subtly incline toward the extended right hand to emphasize the intent to kiss the other’s hand. For the second person, remove the response of raising one hand to blow a kiss. Instead, when the first person’s right hand extends, have the second person also extend the right arm forward and slightly inward, so that both right hands meet midway between them. The second person leans the upper body and head slightly toward the meeting point of the hands, matching the first person’s motion so that they appear to be moving in synchrony toward a mutual hand kiss rather than sending kisses through the air. Synchronize both motions so that the extension of their right arms and the slight lean toward each other happen at roughly the same time, creating a shared, simultaneous action, and keep their left arms mostly relaxed and passive, without expressive gesturing. Avoid any visible exhalation or lip‑blowing gesture; instead, the kiss is implied by their heads moving closer to their joined right hands. Maintain a smooth, natural transition from neutral standing, through arm extension and lean, to a brief hold where their right hands meet, then let them gently return to a relaxed standing posture facing each other.",
+      "confidence": 0.86,
+      "rationale": [
+        "Source description and images show both characters performing blowing‑a‑kiss gestures with separated upper body motions, while the target description states they should face each other, extend right hands, and kiss each other via those hands.",
+        "The images for the target sequence show the two people remaining in place, facing each other with modest body lean, and with no exaggerated arm‑to‑mouth gestures, supporting an edit where flying‑kiss motions are replaced by mutual right‑hand extension and a closer, more direct kiss interaction."
+      ],
+      "final": "Remove air‑kiss gestures, add synchronized right‑hand mutual hand‑kiss while facing."
+    }
+  },
+  {
+    "id": 6376,
+    "m1": {
+      "name": "G046T005A027R013_swap",
+      "org_des": "Both individuals are seated in chairs. first person reaches out first person's hands towards the right limb of second person and proceeds to provide second person with a massage. At the same time, second person places second person's right hand on second person's chest."
+    },
+    "m2": {
+      "name": "G048T000A004R022",
+      "org_des": "first person and second person are positioned on chairs. first person stretches out first person's right hand and impacts the right limb of second person, resulting in second person tilting sideways."
+    },
+    "m_sim": 0.9076821208000183,
+    "t_sim": 0.4375913441181183,
+    "dist_diff": 0.010000000000000009,
+    "angle_diff_deg": 0.9924917506688844,
+    "instruction": {
+      "detail": "Keep both first person and second person seated on their chairs throughout the motion with similar initial body orientations as in the source. Replace the gentle, continuous massaging action on the right limb of second person with a single, more forceful striking motion. Have first person use only first person's right hand: extend first person's right arm quickly toward the right limb of second person in a direct, impactful motion rather than a slow, repetitive massage. Remove any massaging rhythm or multiple strokes and instead emphasize a clear, decisive hit, with a sharper acceleration and a brief contact. Adjust second person’s reaction so that, instead of remaining mostly stable with a hand on the chest, second person’s upper body tilts sideways in response to the impact on the right limb. Reduce or eliminate the explicit action of second person placing second person's right hand on second person's chest, or make it non-emphasized background motion, so the main visible response is the sideways tilt from the impact. Ensure the timing reflects a quick reach and hit followed immediately by second person’s sideways tilt, rather than a prolonged massage sequence.",
+      "confidence": 0.9,
+      "rationale": [
+        "The target description and interaction_change clearly state that the leg interaction changes from a massage to a hit, so the motion must change from gentle, repetitive contact to a single forceful impact.",
+        "The target explicitly mentions first person using the right hand to impact the right limb and second person tilting sideways, which differs from the source where second person mainly keeps a hand on the chest without a strong whole-body reaction."
+      ],
+      "final": "Change massage to one quick hard right-hand hit, causing sideways tilt."
+    }
+  },
+  {
+    "id": 8893,
+    "m1": {
+      "name": "G052T006A032R013_swap",
+      "org_des": "first person and second person are standing. first person proceeds towards second person, stretches out first person's left hand, and makes contact with second person's head. second person responds with a slight nod."
+    },
+    "m2": {
+      "name": "G053T002A011R011",
+      "org_des": "first person reaches out and pats second person on second person's back, causing second person to bend forward."
+    },
+    "m_sim": 0.8697764277458191,
+    "t_sim": 0.5122198462486267,
+    "dist_diff": 0.010000000000000009,
+    "angle_diff_deg": 1.1590777953813272,
+    "instruction": {
+      "detail": "Preserve the initial setup where the first person and second person are standing facing each other. Keep the general forward approach of the first person toward the second person, but adjust the contact target and arm path. Instead of stretching out the first person's left hand toward the second person's head, redirect the reaching motion so that the first person's hand moves down and around to the second person's upper back or shoulder blade area. Rotate or slightly step the first person so that their torso and reaching arm are oriented naturally toward the second person's back, rather than directly toward the front of the head. Change the interaction from a single touch on the head to a gentle patting motion on the back: after the hand makes contact with the second person's back, add one or a few small, vertical patting movements of the first person's hand. Remove the second person's slight nod response, and instead have the second person react by bending their upper body forward in response to the pat on the back, keeping the lower body mostly in place so the bend is clearly visible. Maintain overall timing and approach speed as in the source, only extending time slightly if needed to show the patting sequence and the forward bend clearly. Ensure the overall intent reads as a friendly back pat, with the main visible difference being the contact point moving from the head to the back and the second person's reaction changing from a nod to a forward bend.",
+      "confidence": 0.93,
+      "rationale": [
+        "The target explicitly changes the interaction from touching the head to patting the back, which requires redirecting the arm trajectory and changing the contact point",
+        "The target specifies the second person bends forward instead of nodding, so the response motion must be replaced while keeping the general standing and approach context from the source"
+      ],
+      "final": "Redirect first person’s reach to pat second person’s back, second person bends forward."
+    }
+  },
+  {
+    "id": 7663,
+    "m1": {
+      "name": "G019T000A000R002",
+      "org_des": "first person wants to hug second person face to face, but second person turns first person around and hugs first person from behind, while first person places first person's hands on second person's."
+    },
+    "m2": {
+      "name": "G030T000A000R004",
+      "org_des": "first person stands on the left side of second person and hugs second person with both hands, while second person puts second person's left hand around first person's waist."
+    },
+    "m_sim": 0.8897950649261475,
+    "t_sim": 0.8522703051567078,
+    "dist_diff": 0.040000000000000036,
+    "angle_diff_deg": 1.6096712219143468,
+    "instruction": {
+      "detail": "Keep the initial approach and general body style of both people, but remove the whole sequence where the second person turns the first person around and hugs from behind. From the moment they come close, stop the rotation of the first person so that both first person and second person remain standing side by side, with the first person on the left and the second person on the right, both facing the same forward direction. Adjust the first person’s steps so that instead of moving directly in front of the second person and then being spun, the first person ends up slightly to the left of the second person, at close distance, aligning their shoulders side by side. Change the first person’s upper‑body action from raising the arms for a frontal or back hug to opening both arms outwards and then wrapping both arms around the second person’s upper body from the side, maintaining a natural, gentle squeeze and keeping their chest near the second person’s left arm and shoulder. Remove the part where the first person’s hands are placed on top of the second person’s hands; instead, keep the first person’s hands clasped or resting firmly on the second person’s back or far side as in a side hug. For the second person, eliminate the motion of grabbing, spinning, and hugging the first person from behind; instead, have the second person mostly stay in place, only making small adjustments of the feet to accommodate the side‑by‑side stance. Animate the second person raising the left arm and placing the left hand around the first person’s waist, creating a one‑armed side hug while the right arm stays relaxed or lightly touching the first person’s upper back without dominating the interaction. Ensure that throughout the hug the two torsos stay roughly parallel and close, with no significant twisting of the first person’s spine as in the original turning motion, and that the contact remains a stable, comfortable side hug rather than a dynamic spin into a back hug. Smooth the timing so that the approach is similar in speed to the source, but the transition into the side hug is more direct and continuous, without the sharp rotational acceleration caused by the spin in the original motion.",
+      "confidence": 0.93,
+      "rationale": [
+        "Source description and frames show a dynamic interaction where the second person turns the first person and ends in a back hug with the first person’s hands on the second person’s.",
+        "Target description and frames show a calmer, side‑by‑side hug with the first person on the left, both facing forward, first person using both arms to hug, and the second person placing the left arm around the first person’s waist, so the main edits are to remove the spin and back hug, reposition them side by side, and adjust arm placements accordingly."
+      ],
+      "final": "Remove spin and back hug, create close, relaxed side-by-side hug."
+    }
+  },
+  {
+    "id": 1709,
+    "m1": {
+      "name": "G025T003A015R003",
+      "org_des": "first person walks up and forcefully steps on second person's right foot, causing second person to hold second person's right foot and hop a few times."
+    },
+    "m2": {
+      "name": "G026T003A015R001",
+      "org_des": "first person steps on second person's foot twice with first person's left foot, and second person jumps back a few times."
+    },
+    "m_sim": 0.9515483379364014,
+    "t_sim": 0.9534782767295837,
+    "dist_diff": 0.1499999999999999,
+    "angle_diff_deg": 2.062270794913531,
+    "instruction": {
+      "detail": "Keep the initial approach of the first person toward the second person generally the same, with both facing each other and standing close together. Modify the contact so that the first person clearly uses the left foot to step on the second person’s foot, instead of a single strong stomp that leads to immediate hopping. After the first contact, have the first person briefly lift the left foot and then bring it down again onto the second person’s foot, creating two distinct, consecutive left-foot steps on the same spot, with only a short pause between them while upper-body posture and facing direction remain similar to the source. Reduce any exaggerated reaction in which the second person bends down or grabs their right foot; instead, keep the upper body more upright and focused on withdrawing from the first person. Change the second person’s response so that, right after the first and second stomps, they quickly jump backward multiple times, moving away from the first person in small backward hops while keeping their torso generally facing the first person. Ensure that during these backward jumps the second person does not hold or inspect their foot, but instead uses both arms naturally for balance, and that the distance between the two people gradually increases as the second person retreats. Maintain overall timing so that the approach and initial step occur in roughly the same part of the sequence, but allocate extra time after the second stomp for the series of backward jumps rather than for one-legged hopping in place.",
+      "confidence": 0.9,
+      "rationale": [
+        "Descriptions specify that the source has one forceful step leading to the second person holding their right foot and hopping, while the target has two left-foot steps and a backward jumping retreat.",
+        "The sequence images show similar approach and facing but different responses after contact, supporting changes in number of stomps and the second person’s motion path away from the first person."
+      ],
+      "final": "Change to two quick left-foot stomps, second person jumps backward instead of hopping holding foot"
+    }
+  },
+  {
+    "id": 8592,
+    "m1": {
+      "name": "G015T003A019R030_swap",
+      "org_des": "first person sits and extends first person's left hand to second person. second person bends down and places both second person's hands under first person's armpits to assist first person in standing up. Afterward, first person limps forward."
+    },
+    "m2": {
+      "name": "G021T003A019R026",
+      "org_des": "first person grabs second person's left hand with both of first person's hands and helps second person get up from the chair, and first person and second person walk forward together."
+    },
+    "m_sim": 0.8748620748519897,
+    "t_sim": 0.8678112030029297,
+    "dist_diff": 0.08000000000000007,
+    "angle_diff_deg": 0.13647809718381634,
+    "instruction": {
+      "detail": "Keep the initial sitting pose of both first person and second person, but change the assistance direction so that the first person is the one helping the second person stand up from a chair instead of being helped. Remove the moment where the first person extends only the left hand toward the second person to ask for help, and instead have the first person lean slightly forward and deliberately reach toward the second person’s left hand with both of first person’s hands. Animate the first person clearly grasping the second person’s left hand using both hands, forming a stable two-handed grip that conveys supportive intent. Replace the action where the second person bends down and places both hands under the first person’s armpits; instead, keep the second person initially seated in the chair and then have the second person respond to the first person’s pull by leaning the upper body forward and rising from the chair, primarily pulled up via the held left hand. Ensure the lifting effort is now led by the first person: the first person shifts weight backward slightly and pulls upward with both hands, bracing with the legs and torso to assist the second person’s transition from sitting to standing, while the second person pushes off the chair with the legs and follows the pull. Remove any limping behavior or signs of weakness from the first person after the stand-up; instead, once the second person is fully upright, transition both into a stable, balanced standing posture side by side or slightly offset but facing the same forward direction. From this standing position, have the first person and second person begin walking forward together at a coordinated pace, matching step timing and direction, with their bodies oriented in the same forward walking direction. Maintain the hand-based support interaction throughout the initial steps of walking if desired, but the emphasis should shift from the first person being supported to the first person providing support, with both moving smoothly and steadily forward rather than with a limp or stagger. Overall, change the behavioral intent from the first person being a weakened individual receiving help and then limping away alone, to the first person acting as the helper who confidently assists the second person in standing and then walks forward together with them in a synchronized, cooperative manner.",
+      "confidence": 0.93,
+      "rationale": [
+        "The source explicitly describes the first person as the one being assisted by the second person using hands under the armpits, followed by the first person limping forward alone, while the target explicitly reverses the helper-recipient roles so that the first person helps the second person up using a two-handed grip on the second person’s left hand and then they walk forward together.",
+        "Both descriptions involve support via the hands, so the main change is in who supports whom, the exact hand configuration, the removal of under-armpit lifting and limping, and the addition of coordinated walking together, all of which are directly stated or clearly implied by the source and target descriptions."
+      ],
+      "final": "Make first person help second person stand, then walk forward together."
+    }
+  },
+  {
+    "id": 9178,
+    "m1": {
+      "name": "G048T005A025R007",
+      "org_des": "first person and second person are in an upright position. first person positions first person's self at the rear of second person, extends first person's arms onto the shoulders of second person, leaps, and second person bears the weight of first person on second person's back."
+    },
+    "m2": {
+      "name": "G049T006A025R002",
+      "org_des": "first person and second person stand.   first person turns first person's back to second person, takes second person's hands with first person's own, bends first person's knees, and carries second person on first person's back.   second person places second person's hands on the chest of first person."
+    },
+    "m_sim": 0.8645276427268982,
+    "t_sim": 0.8238828778266907,
+    "dist_diff": 0.010000000000000009,
+    "angle_diff_deg": 2.0599187756303747,
+    "instruction": {
+      "detail": "Keep the overall scenario as a piggyback style carry on back, but swap who is carrying whom and adjust how they get into the carry. Start with both first person and second person standing close together facing each other instead of the first person already behind the second person. Have the first person turn so that first person’s back rotates toward the second person until the first person is standing with their back directly in front of the second person. As the first person turns, have the two characters briefly take each other’s hands: the first person reaches back or to the sides to grasp the second person’s hands, and the second person responds by placing their hands into the first person’s. Remove the jumping action from the source: do not let the first person leap onto the second person. Instead, keep the movement grounded and controlled. Make the first person the carrier: once facing away, the first person bends their knees and lowers their body slightly as if offering their back to the second person. At the same time, have the second person step in close and move upward onto the first person’s back, so that the second person becomes the rider instead of the supporter. While the second person climbs onto the back, transition the hand contact: move the second person’s hands from the initial hand-hold position to resting on the front of the first person’s torso, around the chest area, as if holding on for stability. Ensure that in the final carried pose, the first person is upright with knees slightly bent from supporting weight, the second person is positioned on the first person’s back, and the second person’s hands remain placed on or across the first person’s chest, maintaining close body contact. Keep the motion mostly in place without large translations in space, focusing the edit on reversing the support relationship, removing the leap, and emphasizing the controlled squat and hand placements shown in the target motion.",
+      "confidence": 0.91,
+      "rationale": [
+        "Descriptions specify that in the source the first person jumps onto the second person’s back, while in the target the first person carries the second person, so the roles must be reversed and the leap removed.",
+        "Images show both motions remain a close in‑place piggyback interaction, but the target has a smoother, squat-based mounting with the second person’s hands on the first person’s chest, which guides details of orientation, hand contact, and final pose."
+      ],
+      "final": "Swap roles so first person carries second person via controlled squat and handhold"
+    }
+  },
+  {
+    "id": 8375,
+    "m1": {
+      "name": "G001T006A031R007_swap",
+      "org_des": "first person and second person stand facing each other, simultaneously extending first person's and second person's left hands with first person's and second person's left thumbs raised, placing first person's and second person's thumbs on the left side of first person's and second person's heads."
+    },
+    "m2": {
+      "name": "G014T006A031R005",
+      "org_des": "first person stands in front of second person and raises first person's right thumb. second person, upon seeing this, also raises second person's right thumb."
+    },
+    "m_sim": 0.8789637684822083,
+    "t_sim": 0.9183592200279236,
+    "dist_diff": 0.1100000000000001,
+    "angle_diff_deg": 1.0146965135394395,
+    "instruction": {
+      "detail": "Change the initial spatial arrangement so that the first person stands directly in front of the second person, with the first person clearly positioned closer to the observer and the second person behind. Keep both people generally facing toward each other, but remove the mirrored side‑by‑side facing setup used in the source. Remove the simultaneous action where both the first person and second person extend their left arms and place their raised left thumbs against the sides of their own heads. Instead, have the motion begin with the first person initiating the gesture: the first person raises only the right arm and extends the right hand forward or slightly upward in front of the body with the right thumb raised, clearly forming a standalone thumbs‑up gesture away from the head. Ensure the first person’s right hand does not contact the head and that the hand is held in a visible, neutral space between the torso and head so it reads as a standard thumbs‑up sign. Delay the second person’s response so there is a clear sequential interaction: the second person first looks or orients attention toward the first person’s raised right thumb, then, after a short reaction moment, raises the second person’s right arm and extends the right hand with the right thumb raised in a similar forward thumbs‑up gesture. Keep the timing such that the first person completes the thumbs‑up first, then the second person follows, eliminating the perfectly synchronous movement from the source. Throughout, preserve a generally neutral, upright posture for both participants, but adjust any body or head contact from the original motion so that all thumbs‑up gestures are free in space rather than touching the sides of the head. Maintain the overall positive thumbs‑up interaction, but emphasize that it is now a call‑and‑response style gesture initiated by the first person and imitated by the second person, rather than a coordinated, mirrored action performed at the same time.",
+      "confidence": 0.96,
+      "rationale": [
+        "The source describes both people standing facing each other, simultaneously extending left hands with raised thumbs and placing those thumbs on the left side of their own heads, which defines the original pose, symmetry, and contact point.",
+        "The target describes a sequential interaction where the first person stands in front of the second person, raises only the right thumb in a typical thumbs‑up, and the second person then reacts by also raising the right thumb, implying changes in spatial arrangement, laterality (left to right), removal of head contact, and a shift from simultaneous to sequential motion."
+      ],
+      "final": "Change to staggered call‑and‑response right‑hand thumbs‑up in front."
+    }
+  },
+  {
+    "id": 1551,
+    "m1": {
+      "name": "G035T002A010R001",
+      "org_des": "first person slaps second person with first person's left hand, and then slaps second person with first person's right hand. second person leans to the left and right."
+    },
+    "m2": {
+      "name": "G038T002A010R001",
+      "org_des": "first person slaps second person on the cheek with first person's left hand, while second person's face is struck to the side."
+    },
+    "m_sim": 0.9531393051147461,
+    "t_sim": 0.9320598244667053,
+    "dist_diff": 0.13,
+    "angle_diff_deg": 4.471068318897884,
+    "instruction": {
+      "detail": "Preserve the initial facing direction, distance, and overall timing between the first person and the second person, but simplify the interaction so that there is only a single slap instead of two. Remove the second slap with the first person’s right hand and all associated preparatory and recovery motions, keeping only the initial left hand action as the key interaction. Modify the first person’s left arm motion so that it clearly targets the second person’s cheek rather than the general upper body: have the first person raise the left hand to about head height, rotate the torso slightly toward the second person, then swing the left hand in a short, sharp arc that ends with the palm contacting the side of the second person’s face. Tighten the left arm trajectory so that it is more direct and decisive, with less follow‑through than in the source, and quickly bring the left hand back toward a neutral relaxed position near the first person’s side after the impact. Adjust the second person’s reaction so that instead of leaning alternately to the left and right over time, the second person remains mostly upright before impact, then has the head and upper torso sharply displaced to one side at the moment of contact, as if the cheek is struck and the face is knocked sideways. Ensure the second person’s feet stay planted and the lower body remains largely stable, with the main visible response concentrated in the neck, head, and upper torso twisting briefly away from the slap before returning toward a more neutral stance. Keep both characters’ overall body orientations, step patterns, and starting and ending positions consistent with the source motion, changing only what is necessary to express a single decisive cheek slap and an immediate sideways head reaction.",
+      "confidence": 0.88,
+      "rationale": [
+        "Both descriptions indicate a slap interaction, but the source has two slaps (left then right) with the second person leaning side to side, while the target has a single left hand cheek slap with the second person’s face struck to the side.",
+        "The images show similar spacing and facing between the two people, with the target sequence emphasizing one clear contact and reaction, so the main edits are simplifying to one slap, focusing the strike on the cheek, and changing the second person’s response from repeated leaning to a single sideways head and upper‑body displacement."
+      ],
+      "final": "Change to one decisive left-hand cheek slap with sideways head reaction."
+    }
+  },
+  {
+    "id": 7154,
+    "m1": {
+      "name": "G012T003A019R027_swap",
+      "org_des": "first person stands to the right of second person, with first person's left arm around second person's waist, and second person has second person's right arm around first person's waist. first person and second person both walk forward together slowly."
+    },
+    "m2": {
+      "name": "G016T003A019R024",
+      "org_des": "first person stands to the right of second person.   second person extends second person's right hand and rests it on first person's nape, slightly bending second person's body.   first person uses first person's left hand to provide support to second person's back from behind and assists second person in moving forward.   second person is walking with a noticeable limp."
+    },
+    "m_sim": 0.8976989388465881,
+    "t_sim": 0.8754099011421204,
+    "dist_diff": 0.14,
+    "angle_diff_deg": 2.823617842415712,
+    "instruction": {
+      "detail": "Keep the overall setup with the first person standing to the right of the second person and both moving forward together, but modify their arm positions and the quality of the movement. Remove the mutual arm-around-waist hold: take away the first person's left arm wrapped around the second person's waist and the second person's right arm wrapped around the first person's waist. Repose the second person so that the second person extends the right arm upward and diagonally toward the first person, placing the right hand gently on the back of the first person's neck or nape, with the second person's upper body slightly bent toward the first person. Repose the first person so that instead of holding the waist, the first person reaches the left arm around behind the second person and places the left hand flat against the middle or upper back, clearly providing supportive contact from behind as they move. Adjust the interaction to emphasize support: the first person maintains a steady, guiding hand at the second person's back and moves in sync with the second person, subtly matching pace and direction to assist the second person forward. Change the second person's gait from a normal slow walk to a noticeably limping walk: make one leg step hesitantly or unevenly, with shorter or delayed steps, and slightly more weight or time placed on the non-injured leg, so the forward motion appears labored. Keep the overall forward walking direction, but slow and irregularly modulate the second person's step timing to reflect the limp, while the first person's steps remain more stable and adjusted to stay close and supportive. Maintain close side-by-side proximity and overall body orientation from the source motion, but show the second person's torso leaning a bit toward the first person due to the limp and the supportive contact, reinforcing the impression that the first person is actively assisting the second person in moving forward.",
+      "confidence": 0.94,
+      "rationale": [
+        "The source describes mutual waist-level support with both walking slowly; the target replaces this with the second person's right hand on the first person's nape and the first person's left hand supporting the second person's back, so the instruction must remove the waist hold and reassign hand placements and torso posture accordingly.",
+        "The target explicitly states that the second person is walking with a noticeable limp and that the first person assists in moving forward, so the instruction must change the second person's gait to an uneven, limping walk while keeping the overall forward direction and making the first person's motion stable and supportive."
+      ],
+      "final": "Remove waist hold, add supportive back hold and limping, leaning walk."
+    }
+  },
+  {
+    "id": 5332,
+    "m1": {
+      "name": "G015T005A029R024",
+      "org_des": "first person and second person stand facing each other, engaging in a conversation. first person initiates hand gestures with both of first person's hands, and second person mirrors the action, also utilizing both of second person's hands to convey second person's thoughts in the conversation."
+    },
+    "m2": {
+      "name": "G044T005A029R024_swap",
+      "org_des": "first person and second person stand facing each other, and first person waves first person's arms to chat, followed by second person dancing second person's hands to talk."
+    },
+    "m_sim": 0.9184229373931885,
+    "t_sim": 0.9191222190856934,
+    "dist_diff": 0.05999999999999983,
+    "angle_diff_deg": 3.0924210222127053,
+    "instruction": {
+      "detail": "Keep first person and second person standing and facing each other throughout, maintaining the same conversational interaction. Modify the hand and arm motions so that the gestures are no longer simultaneous and mirrored. In the first phase, have only first person actively gesture: change first person's generic hand gestures with both hands into a more wave-like arm motion, where first person waves first person's arms in a casual, chatty manner to emphasize speech, while second person mostly remains neutral or minimally responsive with the hands. Ensure first person’s arm waves are clearly led by the arms rather than just small hand movements, with visible up and down or side-to-side waving that conveys chatting. After a brief beat, transition into the second phase where first person’s arm waving subsides to a more relaxed, listening posture, while second person becomes the main gesturer. Change second person’s previous mirroring behavior into a distinct, more rhythmic and animated \"dancing\" motion of second person's hands, with the wrists and fingers moving in a lively, patterned way to accompany second person's speech, rather than simply copying first person. Maintain the face-to-face orientation and conversational feel, but emphasize this sequential turn-taking: first person waves arms to chat, then second person dances hands to talk, with a clear shift of expressive motion from one person to the other instead of continuous mutual mirroring.",
+      "confidence": 0.93,
+      "rationale": [
+        "The target description explicitly changes from simultaneous, mirrored hand gestures to a sequential pattern where first person waves arms to chat, followed by second person dancing hands to talk, so the instruction focuses on altering timing and role emphasis.",
+        "Both descriptions maintain a face-to-face conversation with similar overall interaction type (Chat to Chat), so posture, orientation, and general conversational context should remain, while the main edits concern the style and order of arm and hand motions."
+      ],
+      "final": "Make gestures sequential: first person waves arms, then second person dances hands."
+    }
+  },
+  {
+    "id": 6593,
+    "m1": {
+      "name": "G003T000A003R017",
+      "org_des": "first person grabs second person's right hand with first person's left hand, then gently drags second person to the right while turning right in place themselves."
+    },
+    "m2": {
+      "name": "G010T000A003R012_swap",
+      "org_des": "first person stretches out first person's right hand, second person seizes first person's right arm with second person's right hand, and pulls first person ahead. first person, with first person's right hand being grasped, proceeds a few paces forward."
+    },
+    "m_sim": 0.9050604701042175,
+    "t_sim": 0.9498890042304993,
+    "dist_diff": 0.030000000000000027,
+    "angle_diff_deg": 3.8400728581664705,
+    "instruction": {
+      "detail": "Modify the interaction so that the first person is no longer the one initiating the grab and leading the motion. At the start, instead of the first person reaching with the left hand to grab the second person's right hand, have the first person extend and present the right arm or right hand forward in a neutral, offering posture, without touching the second person yet. Keep the first person mostly facing forward in the initial pose, with the right arm stretched out ahead or slightly toward the second person, and do not rotate the first person to the right as in the original motion. Next, change who grabs whom: have the second person reach out with the second person's right hand and grasp the first person's extended right arm or right hand, clearly showing the grab initiated by the second person rather than the first person. Once the second person has securely seized the first person's right arm, reverse the leading direction: instead of the first person dragging the second person to the right, have the second person pull the first person forward, in the direction the first person is facing. Remove the first person's in‑place rightward turn and sideways dragging motion; replace it with a forward‑moving sequence where the first person, with the right arm held by the second person, is guided or slightly pulled straight ahead. Ensure the first person's body follows the pull with a few walking steps forward, maintaining the grasped right arm slightly forward and tense, rather than using the left arm to lead. Keep the overall interaction gentle, like the original, but clearly communicate that the motion flow now goes from the second person initiating the grab and pulling, and the first person complying and moving ahead, instead of the first person initiating and dragging to the right.",
+      "confidence": 0.93,
+      "rationale": [
+        "The source describes the first person using the left hand to grab the second person's right hand and then dragging the second person to the right while turning right in place, so the first person initiates and leads a sideways motion with body rotation.",
+        "The target describes the first person extending the right hand, the second person using the right hand to seize the first person's right arm, and then pulling the first person forward for a few paces, so leadership, grabbing hand, grabbed limb, and movement direction all change and must be reflected in the editing instruction."
+      ],
+      "final": "Have first person offer right arm, second person grabs and gently pulls forward"
+    }
+  },
+  {
+    "id": 9183,
+    "m1": {
+      "name": "G043T003A019R023",
+      "org_des": "first person walks over to second person's side and supports second person with both hands while second person limps along."
+    },
+    "m2": {
+      "name": "G045T003A019R028",
+      "org_des": "first person holds second person's arm with both hands, while second person lifts one foot, and then first person helps second person limp forward."
+    },
+    "m_sim": 0.8643999695777893,
+    "t_sim": 0.8396239280700684,
+    "dist_diff": 0.1299999999999999,
+    "angle_diff_deg": 4.995678466437584,
+    "instruction": {
+      "detail": "Keep the overall walking direction, timing, and close side‑by‑side interaction the same, but adjust the sequence so that there is a clearer preparatory lifting of the second person’s leg before the shared limp forward. At the moment when the first person reaches the second person’s side, refine the contact so the first person explicitly grasps the second person’s near arm with both hands, rather than offering a more general torso or shoulder support; the first person’s hands should be positioned one above the other along the forearm or upper arm, with elbows slightly bent, as if firmly holding and stabilizing that arm. Have the second person respond to this grip by leaning slightly more toward the first person and momentarily lifting one foot off the ground, bending that knee so that the lower leg hangs or tucks back, clearly showing that the second person cannot stand or step normally on that side. During this brief lifted‑foot phase, keep both characters mostly in place or only minimally shifting their bodies, maintaining the same facing direction as in the source and preserving the close side‑by‑side spacing. After this pause, transition smoothly into the assisted limp: the second person lowers the raised foot and begins to move forward with an uneven, limping gait, letting more body weight hang on the arm that the first person is holding; emphasize that one leg steps cautiously or less frequently while the other leg bears more load. Synchronize the first person’s motion so that they start walking forward in step with the second person’s limp, keeping both hands on the second person’s arm throughout and slightly pulling or bracing that arm each time the second person steps, clearly showing that the first person is actively helping the second person limp forward. Maintain the original forward path, walking speed, and general body orientations from the source motion, changing only the contact style to a two‑handed arm hold, the brief initial foot lift of the second person, and the more pronounced assisted limp behavior that follows.",
+      "confidence": 0.86,
+      "rationale": [
+        "Both descriptions specify that the first person supports the second person, but the target explicitly frames this as holding the second person’s arm with both hands and adds a distinct moment when the second person lifts one foot before limping forward.",
+        "The sequence images show similar side‑by‑side walking with support; the main visual difference is a clearer leaning and foot‑lift phase in the target, so the instruction focuses on modifying the contact point, adding the lifted‑foot preparation, and emphasizing an assisted limp while preserving direction and timing."
+      ],
+      "final": "Change to two‑handed arm hold, add leg lift pause, then stronger assisted limp."
+    }
+  },
+  {
+    "id": 8282,
+    "m1": {
+      "name": "G004T012A030R014",
+      "org_des": "first person and second person stand facing each other, and first person extends first person's hands to pat the face of second person."
+    },
+    "m2": {
+      "name": "G049T007A030R002_swap",
+      "org_des": "first person raises first person's hands and touches second person's face, and then second person raises second person's hands and touches first person's hand."
+    },
+    "m_sim": 0.8802845478057861,
+    "t_sim": 0.7398626208305359,
+    "dist_diff": 0.040000000000000036,
+    "angle_diff_deg": 3.8326760524756023,
+    "instruction": {
+      "detail": "Keep both first person and second person standing and facing each other throughout. Modify the initial action so that first person raises first person's hands toward second person's face in a controlled, deliberate way rather than moving in a patting motion. Have first person make gentle, stable contact with second person's face, holding the touch briefly instead of repeatedly patting. After this touch is established, introduce a new reciprocal response from second person: second person then raises second person's hands upward toward first person's hands while first person's hands are still near or on second person's face. Guide second person to touch first person's hands with both of second person's hands, creating a mutual hand contact, and then let both maintain this contact momentarily before the motion resolves. Remove any repeated patting on the cheek and replace it with this sequence of first person touching second person's face followed by second person touching first person's hands.",
+      "confidence": 0.9,
+      "rationale": [
+        "The target description specifies a change from first person patting the face to first person raising hands and touching the face in a more singular, stable action, which must replace the patting in the source.",
+        "The target introduces a new reciprocal interaction where second person raises hands and touches first person's hand, so the edited motion must add this second phase while keeping both participants facing each other as in the source."
+      ],
+      "final": "Replace patting with a gentle face touch, then mutual hand contact"
+    }
+  },
+  {
+    "id": 8090,
+    "m1": {
+      "name": "G054T000A000R000_swap",
+      "org_des": "first person turns to face second person and raises both hands to first person's head. Then first person puts first person's hands down and turns back. second person turns right. Then second person turns to face first person. second person reaches out both hands to hug first person's waist, while first person pats second person's back with first person's right hand and second person's head with first person's left hand. After that, first person and second person put down first person's and second person's arms and turn back."
+    },
+    "m2": {
+      "name": "G056T000A000R003",
+      "org_des": "first person and second person stand face to face, take a step forward, first person raises first person's hands and hugs second person's back, while second person also hugs first person's waist."
+    },
+    "m_sim": 0.8834181427955627,
+    "t_sim": 0.9338842630386353,
+    "dist_diff": 0.10000000000000009,
+    "angle_diff_deg": 3.3024592981237477,
+    "instruction": {
+      "detail": "Remove the initial turning and head-touch sequence of the first person. Instead of starting with the first person turning to face the second person and raising both hands to the first person's own head, begin the motion with first person and second person already standing face to face, both facing each other in a neutral stance. Remove the subsequent actions where the first person puts first person's hands down, turns back, and the second person turns right and then turns back to face the first person. Eliminate all these orientation changes so that both first person and second person remain facing each other throughout the interaction. Remove the later part of the original hug interaction where the second person alone initiates the hug by reaching both hands to the first person's waist while the first person only pats the second person's back and head. Instead, have both characters take a small step forward toward each other at approximately the same time before the embrace. Replace the asymmetric hugging and patting with a mutual, full hug: first person should raise first person's arms forward and around the second person to hug the second person's back, keeping both hands on the second person's back rather than on the second person's head. At the same time, second person should wrap both arms around the first person's waist in a stable hugging pose, maintaining contact rather than just reaching in briefly. Maintain the face-to-face contact and the mutual hug for a short, steady hold, and remove the final motion where they quickly put their arms down and turn away from each other. End the motion with first person and second person still in a close, stable hugging posture, facing each other and not turning their backs.",
+      "confidence": 0.93,
+      "rationale": [
+        "The target description specifies that both first person and second person start face to face, take a step forward, and mutually hug, while the source includes multiple turning-away actions and an asymmetric interaction with patting that must be removed or altered.",
+        "To match the target, the instruction must remove the self-touching of the first person's head, remove all extra turns, introduce a synchronized step forward, and replace the patting-based, asymmetric hug with a mutual embrace where first person hugs the second person's back and second person hugs the first person's waist, ending in a held hug rather than turning away."
+      ],
+      "final": "Start with both facing, step together, hold a mutual full hug."
+    }
+  },
+  {
+    "id": 3664,
+    "m1": {
+      "name": "G006T003A010R002",
+      "org_des": "first person and second person face each other. first person steps forward and extends first person's left hand, striking second person's right side of the face."
+    },
+    "m2": {
+      "name": "G033T002A010R001",
+      "org_des": "first person and second person stand face to face. first person raises first person's left hand and hits second person's right face."
+    },
+    "m_sim": 0.9340595006942749,
+    "t_sim": 0.9134207367897034,
+    "dist_diff": 0.010000000000000009,
+    "angle_diff_deg": 1.1949378895869538,
+    "instruction": {
+      "detail": "Keep the overall scenario and interaction type the same, with the first person and second person standing facing each other and the first person using the left hand to slap the right side of the second person’s face. Remove the forward stepping approach that exists in the source motion so that the first person stays in place at a fixed distance from the second person throughout the sequence. Adjust the start so that both characters begin already close and stably facing each other, with minimal body translation and only subtle postural sway. Have the first person initiate the action mainly with an upper body and arm movement instead of whole‑body locomotion: the torso stays mostly in place, the hips and feet remain planted, and only a slight weight shift occurs rather than a clear step forward. Modify the left arm trajectory from a reaching strike during a step into a more compact raising‑and‑hit action: first person lifts the left hand from a relaxed position up along the side of the body to about head level, then quickly swings the forearm and hand across to impact the right side of the second person’s face. Ensure the timing emphasizes a brief preparation followed by a clean, single slap: the arm rise is smooth and relatively quick, the strike happens while both bodies remain almost stationary, and there is no continued forward advance after impact. Preserve the second person’s role as the receiver of the slap, keeping their body mostly in place and facing the first person, with only a slight reactive motion if present, but without needing to step or retreat. Overall, convert the source motion from a stepping, closing‑distance slap into a stationary, close‑range slap where the primary visible change is the first person raising the left arm and delivering the hit without changing position.",
+      "confidence": 0.86,
+      "rationale": [
+        "Both descriptions specify the same interaction type (a slap to the right side of the second person’s face with the first person’s left hand), so the main change is not the interaction itself but how it is executed.",
+        "The source description explicitly mentions that the first person steps forward before striking, while the target description and the longer, denser target sequence visually suggest both remain at a fixed distance and the action comes mainly from an arm raise and hit, so the key edit is removing locomotion and emphasizing a stationary arm‑driven slap."
+      ],
+      "final": "Remove the forward step, perform a close-range, stationary slap."
+    }
+  },
+  {
+    "id": 9639,
+    "m1": {
+      "name": "G049T007A033R020",
+      "org_des": "first person raises first person's right hand and puts it on first person's left hand, and second person does the same."
+    },
+    "m2": {
+      "name": "G049T007A033R021",
+      "org_des": "first person and second person sit facing each other. first person holds first person's hands flat, then circles first person's arms in front of first person's chest and unfolds them. second person imitates first person's movements."
+    },
+    "m_sim": 0.854478657245636,
+    "t_sim": 0.837666928768158,
+    "dist_diff": 0.08999999999999986,
+    "angle_diff_deg": 2.030255825073661,
+    "instruction": {
+      "detail": "Keep both the first person and second person in their original facing direction and relative positions, and keep the interaction type as imitation where the second person mirrors the first person’s movements. Change the initial pose so that both the first person and second person are in a sitting posture facing each other, instead of standing. Their torsos should stay mostly upright and stable throughout, with only natural upper body motion. Replace the original short gesture of raising the right hand to touch the left hand with a longer, continuous arm sequence focused in front of the chest. Have the first person begin with both hands held up in front of the chest, palms flat and roughly facing each other or slightly forward, elbows bent and close to the body. From this position, direct the first person to draw a smooth circular motion with both forearms and hands together in front of the chest. The arms should travel outward and around in a horizontal or slightly inclined circle while the shoulders and torso remain largely in place. After completing the circular motion, have the first person unfold and open the arms away from the chest, extending them outward from the body in a clear, finishing gesture before returning to a relaxed position. Preserve natural continuity between the circular phase and the unfolding phase so it feels like one flowing movement. Ensure the second person imitates the first person’s sequence in real time: starting from the same seated facing pose, raising their hands flat in front of their chest, circling their arms in front of their chest in sync with the first person, and then unfolding their arms outward in the same manner. Maintain approximate temporal alignment so the imitation remains clear. Remove any self-touching of one hand onto the other forearm or hand from the source motion. All focus should be on symmetrical two-hand motions in front of the chest, the circular path, and the final outward unfolding, while keeping lower body and global position as stable as possible apart from the change to sitting.",
+      "confidence": 0.87,
+      "rationale": [
+        "Descriptions specify that the source is a brief self-touch gesture with each person raising the right hand to the left hand, whereas the target is a seated interaction involving both hands moving together in a circular motion then unfolding outward while the second person imitates.",
+        "The sequence images for both motions show two characters facing each other with relatively small displacements, supporting that the primary changes are posture (standing to sitting) and upper body gesture complexity and timing, while the interaction type imitation remains the same."
+      ],
+      "final": "Switch both to sitting, add mirrored chest-level circular arm sweep and outward unfolding."
+    }
+  },
+  {
+    "id": 3635,
+    "m1": {
+      "name": "G018T004A020R004",
+      "org_des": "first person and second person face each other. first person sits down and raises first person's right hand to first person's chest, while second person raises second person's right hand in front of second person to play rock-paper-scissors. second person throws scissors, and first person throws rock. Then, first person switches to first person's left hand on first person's chest, and second person throws paper, while first person throws rock."
+    },
+    "m2": {
+      "name": "G031T005A020R000",
+      "org_des": "first person offers first person's right hand to second person to engage in a game of rock-paper-scissors. first person makes a fist, while second person presents paper, and first person chooses scissors. In response, second person presents paper, followed by a fist, and ultimately scissors."
+    },
+    "m_sim": 0.9343981146812439,
+    "t_sim": 0.8968504071235657,
+    "dist_diff": 0.08999999999999986,
+    "angle_diff_deg": 2.7510299550736304,
+    "instruction": {
+      "detail": "Keep the overall scene with first person and second person standing in place and facing each other, preserving their body orientations and distance. Remove the action where first person sits down and any transitions into or out of a seated pose so that both first person and second person remain standing throughout the interaction. Replace the initial gesture in which first person raises first person's right hand to first person's chest with a more offering posture: first person should extend first person's right arm slightly forward toward second person at about chest level, hand open and ready to play rock paper scissors. Change the first exchange so that instead of second person throwing scissors while first person throws rock, first person closes the offered right hand into a clear rock like fist, and second person presents an open paper hand toward first person at the same moment. Immediately after this first reveal, have first person transition that same right hand from the rock pose into a scissors pose by extending the index and middle fingers, while keeping the arm generally in the same forward position, signaling that first person chooses scissors after initially making a fist. Remove the later source behavior where first person switches to using first person's left hand on the chest and where second person throws paper against first person’s rock; there should be no hand swap and no chest touching motion. Instead, create a short sequence of follow up throws by second person using second person’s forward facing right hand: after the first paper pose, have second person pull the right hand back slightly and then present paper again toward first person, then transition that hand into a rock like fist in front of second person, and finally change that fist into a scissors pose directed toward first person. Ensure these successive hand shape changes for second person occur while both characters stay mostly stationary in their positions, with only natural small arm and wrist movements and smooth timing between each reveal, and maintain eye contact and the shared rock paper scissors focus between them. Overall, emphasize that the interaction is a standing, repeated rock paper scissors style exchange using primarily first person’s right hand for one fist then scissors, and second person’s right hand cycling through paper, then fist, then scissors, without any sitting down, left hand involvement, or hand placed on the chest.",
+      "confidence": 0.86,
+      "rationale": [
+        "The descriptions clearly contrast a seated, chest touching, hand switching interaction in the source with a standing, extended hand, repeated right hand sequence in the target.",
+        "The images show both people staying upright and mostly in place in the target, supporting removing the sit down and left hand motions while keeping the facing orientation and distance the same."
+      ],
+      "final": "Keep both standing. Offer first person’s right hand forward. Change sequence to: first person fist then scissors, second person paper, paper, fist, scissors. Remove sitting, left hand, and chest touches."
+    }
+  },
+  {
+    "id": 609,
+    "m1": {
+      "name": "G047T006A033R019",
+      "org_des": "first person and second person stand facing each other. first person extends first person's hands from first person's chest and waves first person's hands forward. second person imitates this action by extending second person's hands from second person's chest and waving second person's hands forward."
+    },
+    "m2": {
+      "name": "G047T006A033R021",
+      "org_des": "first person and second person stand face to face, and then first person extends both hands and opens first person's arms. Then second person imitates this action by also extending both hands and opening second person's arms."
+    },
+    "m_sim": 0.9653364419937134,
+    "t_sim": 0.9321578741073608,
+    "dist_diff": 0.020000000000000018,
+    "angle_diff_deg": 1.7122444057103727,
+    "instruction": {
+      "detail": "Keep the overall setup the same: first person and second person stand facing each other at a fixed distance, and the interaction remains an imitation where the second person copies the first person’s action after a short delay. Replace the waving gesture with an arm-opening gesture. Modify the first person’s motion so that instead of extending both hands from the chest and repeatedly waving them forward, the first person smoothly extends both arms outward from in front of the torso into a more open, spread posture, as if opening the arms to the sides at about chest height. Ensure the first person’s hands travel outward and slightly away from the body rather than forward toward the second person, and remove the repeated forward–back waving cycles so the movement is primarily a single or slow opening action that then holds briefly. Adjust the timing so that after the first person reaches or nearly reaches this open-arms pose, the second person begins to imitate. For the second person, replace the previous forward hand-waving imitation with the same outward arm-opening motion: starting from hands near the chest, extend both arms outward to match the first person’s open-arms pose, with similar speed and amplitude. Maintain body orientation, leg stance, and relative positions of both people unchanged from the source, and keep the imitation relationship clear by preserving the sequential order of first person acting and second person following with the same open-arms gesture.",
+      "confidence": 0.93,
+      "rationale": [
+        "Both descriptions and sequences show two people facing each other with an imitation interaction; this should be preserved while only changing the gesture type and its trajectory.",
+        "The source involves forward hand-waving from the chest, whereas the target explicitly describes extending both hands outward and opening the arms; the main edit is to replace the repeated forward waves with a smoother outward arm-opening motion for both participants, keeping stance and timing structure similar."
+      ],
+      "final": "Replace both characters’ forward hand-waving with a single outward arm-opening gesture."
+    }
+  },
+  {
+    "id": 5478,
+    "m1": {
+      "name": "G039T002A007R013_swap",
+      "org_des": "first person pushes second person from second person's back, causing second person to take unsteady steps as second person moves forward."
+    },
+    "m2": {
+      "name": "G046T001A007R014",
+      "org_des": "first person stands behind second person, raises both first person's hands, and pushes second person towards second person's back, followed by second person walking forward."
+    },
+    "m_sim": 0.9170352220535278,
+    "t_sim": 0.9830657839775085,
+    "dist_diff": 0.030000000000000027,
+    "angle_diff_deg": 2.5029293043646574,
+    "instruction": {
+      "detail": "Keep the overall setup with the first person behind the second person and preserve the forward push interaction and the second person’s forward movement. Modify the beginning of the motion so that, instead of immediately pushing, the first person first clearly stands still behind the second person in a stable stance, facing in the same direction as the second person. Have the first person then deliberately raise both hands up and forward to place them on the second person’s back, making this arm lifting and contact phase visibly distinct before the push happens. After the hands are placed, add a brief pause or preparation moment, then have the first person perform a single, more controlled push from behind, using both hands together, while keeping the body mostly stable and upright. Change the second person’s reaction so that, instead of taking noticeably unsteady or stumbling steps, the second person transitions into more regular, stable walking forward after being pushed, with smoother, more even steps and less visible loss of balance. Ensure the push direction and overall forward motion remain the same as in the source, but adjust the timing to emphasize the sequence: stand behind, raise hands, place hands, then push, followed by the second person walking forward in a steady manner.",
+      "confidence": 0.93,
+      "rationale": [
+        "The target description explicitly adds a preparatory phase where the first person stands behind, raises both hands, and then pushes, which is not mentioned in the source, so the instruction needs to introduce that staged buildup before the push.",
+        "The source describes the second person taking unsteady steps, while the target describes the second person walking forward, implying a change from an unbalanced reaction to more stable, regular walking after the push."
+      ],
+      "final": "Add clear stand, raise both hands to back, then single controlled push, second person walks steadily."
+    }
+  },
+  {
+    "id": 7271,
+    "m1": {
+      "name": "G013T005A021R005",
+      "org_des": "first person raises first person's right hand high and grabs second person's right hand, spinning around together."
+    },
+    "m2": {
+      "name": "G024T004A021R008",
+      "org_des": "first person lifts second person's right hand over second person's head using first person's right hand, while second person spins in place to perform a dance move."
+    },
+    "m_sim": 0.8960154056549072,
+    "t_sim": 0.9318405389785767,
+    "dist_diff": 0.0,
+    "angle_diff_deg": 1.8787948157719463,
+    "instruction": {
+      "detail": "Keep the initial approach and hand connection between first person and second person, but change what happens after their right hands meet so that only the second person spins rather than both of them spinning together. Once the first person’s right hand makes contact with the second person’s right hand, have the first person lift the second person’s right arm upward and slightly outward, guiding it in an arc so that the joined hands rise above the second person’s head instead of staying more to the side. Anchor the first person mostly in place facing the second person, with only small torso and foot adjustments used to guide the spin, and remove the first person’s full-body turning motion that exists in the source. Make the second person perform the main rotational movement: as their right arm is raised over their head, have the second person pivot around their own vertical axis under the lifted arm, completing a smooth spin in place like a simple ballroom or social dance turn. Ensure the second person’s spin is clearly under their own raised arm, with the torso turning while the first person’s arm stays above and slightly behind the second person’s head, emphasizing the feeling that the first person is leading and the second person is following the dance move. Maintain the overall timing and dance-like quality from the source, but redistribute the motion so that the rotation and visual focus are on the second person’s solo turn while the first person primarily leads and supports the movement without spinning around together.",
+      "confidence": 0.9,
+      "rationale": [
+        "Source description and images show both people spinning together while holding right hands, implying shared rotation around a common center.",
+        "Target description and images specify that the first person lifts the second person’s right hand over the second person’s head and the second person spins in place, so the edit mainly shifts rotation from a coupled spin to a guided solo spin with the arm raised overhead."
+      ],
+      "final": "Stop first person spinning, instead, lift second person’s arm overhead and spin second person in place"
+    }
+  },
+  {
+    "id": 8875,
+    "m1": {
+      "name": "G006T000A000R002",
+      "org_des": "first person and second person face each other, opening first person's and second person's arms to embrace each other. first person wraps first person's left hand around second person's waist."
+    },
+    "m2": {
+      "name": "G042T007A034R024",
+      "org_des": "first person embraces second person and kisses second person on the cheek, while another first person steps forward and hugs second person."
+    },
+    "m_sim": 0.8701343536376953,
+    "t_sim": 0.6853581070899963,
+    "dist_diff": 0.10999999999999999,
+    "angle_diff_deg": 4.6768094645244815,
+    "instruction": {
+      "detail": "Keep the overall approach and embracing motion from the source, where first person and second person start facing each other and move into a hug, but modify the interaction so it becomes a cheek kiss with an added forward step and more enveloping embrace. Begin with first person and second person standing close and facing each other as in the source, opening their arms to initiate an embrace in a similar timing and body orientation. As they come together, have first person wrap one arm around second person’s waist as in the source, but bring the other arm up higher around second person’s upper back or shoulder to create a fuller hug. During the peak of the embrace, tilt first person’s upper body and head slightly toward one side of second person’s face and animate first person bringing their face close to second person’s cheek. Add a clear kissing-on-the-cheek action: first person briefly touches their lips to second person’s cheek while maintaining the hug, with a small, gentle head movement that reads as a kiss rather than just a head touch. While this cheek kiss occurs, have second person remain mostly in the same embracing posture as in the source, only making subtle adjustments such as a slight lean in toward first person and minor arm tightening to support the closer contact. Introduce an additional forward step for first person: as they move from the initial facing stance into the hug, first person should clearly step forward with one foot, shifting their body closer into second person so that the contact for the kiss feels intentional and dynamic, then settle their weight into the embrace. Maintain the overall timing and smooth transition from open arms to closed embrace from the source, but extend the contact phase slightly to allow time for the cheek kiss and the extra tightening of the hug before both characters stabilize in a comfortable, close posture.",
+      "confidence": 0.86,
+      "rationale": [
+        "The descriptions and images show both motions centered on two people approaching and hugging, with the explicit interaction change from a simple hug to a kiss on the cheek, so preserving the hug while adding a cheek kiss and a clearer forward step matches both.",
+        "The sequence images of the target suggest slightly more intimate and dynamic contact than the source, which supports adding a head tilt, cheek contact, and fuller arm wrapping while keeping orientation, timing, and general flow of the original embrace."
+      ],
+      "final": "Add a forward step, fuller hug, and cheek kiss."
+    }
+  },
+  {
+    "id": 6633,
+    "m1": {
+      "name": "G014T001A007R016_swap",
+      "org_des": "first person places first person's hands on second person's shoulders and forcefully pushes second person, resulting in second person staggering and moving in a forward direction."
+    },
+    "m2": {
+      "name": "G044T001A007R012",
+      "org_des": "first person pushes second person forcefully from behind, using one hand on second person's back. second person jumps forward, raising both arms in the air."
+    },
+    "m_sim": 0.9045563340187073,
+    "t_sim": 0.8988698124885559,
+    "dist_diff": 0.16999999999999993,
+    "angle_diff_deg": 4.382532059625395,
+    "instruction": {
+      "detail": "Keep the overall idea of the first person forcefully pushing the second person, but change the push from a frontal, two-handed shove on the shoulders to a single-handed push delivered from behind onto the second person's upper back. Reorient the first person so they stand behind the second person rather than facing them, with the first person’s torso and gaze directed toward the second person’s back. Remove the initial motion where the first person raises and places both hands on the second person’s shoulders; instead, animate the first person bringing one arm forward from behind and making firm contact with the center of the second person’s back. Make the push a clear, strong forward drive with that single hand, with the first person’s body weight briefly shifting forward to emphasize the force. Adjust the second person’s reaction so they do not merely stagger forward, but instead are propelled into a more pronounced forward jump. At the moment of being pushed, have the second person launch into a forward jump, extending through the legs and moving clearly ahead in the same forward direction as in the source, rather than taking short, unsteady steps. During this jump, change the second person’s upper body response from trying to regain balance with lowered or forward-reaching arms to a more open, reactive pose with both arms lifted up into the air. Ensure the timing reflects a quick, sudden impact followed immediately by a single, more dramatic forward jump rather than multiple staggering steps. Maintain the aggressive, forceful intent of the interaction while emphasizing that the push now comes from behind with one hand on the back and leads to a jumping, arms-up reaction from the second person.",
+      "confidence": 0.93,
+      "rationale": [
+        "Source motion describes a frontal, two-handed push on the shoulders leading to staggering steps forward, while the target specifies a one-handed push from behind on the back leading to a forward jump with arms raised.",
+        "Interaction type remains a push, but body orientation, contact point, number of hands used, and the second person’s reaction and arm pose clearly change and are explicitly described in the target, guiding the editing instruction with little ambiguity."
+      ],
+      "final": "Move first person behind, push back with one hand, make second person jump forward with arms raised."
+    }
+  },
+  {
+    "id": 1905,
+    "m1": {
+      "name": "G012T002A012R011",
+      "org_des": "first person and second person stand facing each other, with first person extending first person's right hand and pointing at second person using first person's index finger. Then, second person presses down on first person's right hand with second person's own right hand."
+    },
+    "m2": {
+      "name": "G012T002A012R012",
+      "org_des": "first person and second person confront each other, wherein first person elevates first person's left hand and directs it towards second person. Subsequently, second person employs second person's right hand to swiftly strike away first person's left hand, resulting in first person relinquishing first person's grasp."
+    },
+    "m_sim": 0.9497922658920288,
+    "t_sim": 0.9785902500152588,
+    "dist_diff": 0.08000000000000007,
+    "angle_diff_deg": 0.02027685702981775,
+    "instruction": {
+      "detail": "Keep the overall timing, spacing, and facing direction of both characters the same, with first person and second person standing in place, facing each other throughout. Modify the initial pointing so that first person now raises and extends first person's left arm instead of the right arm, directing the left hand and index finger toward second person at about chest level, as if confronting or accusing second person. Maintain first person’s body posture mostly upright and tense, but adjust the pose so the left shoulder and left side of the torso are slightly engaged in the gesture, while the right arm stays more neutral by the side and does not actively participate in the interaction. Preserve second person’s initial neutral stance while first person is pointing, with second person watching first person’s left hand for a brief moment before reacting. Change the interaction that follows: instead of second person pressing straight down onto first person’s right hand, have second person quickly bring up second person’s right hand and strike or swat first person’s extended left hand sideways, in a sharp, deflecting motion directed away from second person’s body. Make the contact from second person’s right hand more forceful and lateral than in the source, conveying an aggressive knock-away rather than a downward push, with a slightly faster speed and clearer impact moment. After the strike, adjust first person’s reaction so that first person’s left arm is knocked off line and pulled back toward first person’s body, with the hand no longer pointing at or making any controlling contact toward second person, clearly showing that first person has relinquished the previous assertive gesture. Ensure both characters remain in roughly the same positions on the ground plane, with no large steps or body rotations, and keep the overall sequence length similar to the source while emphasizing a more confrontational, abrupt interaction in the middle of the motion.",
+      "confidence": 0.9,
+      "rationale": [
+        "The descriptions clearly specify the main differences: switching from right-hand pointing to left-hand pointing, and changing second person’s response from a downward press to a swift strike that knocks the hand away.",
+        "The sequence images show similar overall spacing and facing, with the key variation happening in the arm interactions, supporting instructions that preserve stance and timing while refining limb usage and the style of contact."
+      ],
+      "final": "Switch first person to left-handed accusing point, second person sharply swats it sideways."
+    }
+  },
+  {
+    "id": 1870,
+    "m1": {
+      "name": "G023T004A020R003",
+      "org_des": "first person and second person sit and play finger-guessing.   first person shows scissors, rock, and paper.   second person shows paper, rock, and then paper."
+    },
+    "m2": {
+      "name": "G025T004A020R002",
+      "org_des": "first person and second person sit opposite each other and engage in a hand-slapping game. first person consistently selects \"rock\" twice, while second person pretends not to make a move on two occasions. In the last round, first person and second person simultaneously choose \"rock.\""
+    },
+    "m_sim": 0.950115978717804,
+    "t_sim": 0.9302752017974854,
+    "dist_diff": 0.10000000000000009,
+    "angle_diff_deg": 3.31921950269065,
+    "instruction": {
+      "detail": "Preserve the overall sitting arrangement and facing direction of both the first person and the second person, keeping them seated opposite each other throughout the clip. Maintain the general upper‑body posture and the cadence of taking turns with their hands, but change the interaction from a variable finger‑guessing sequence into a repetitive rock‑choice pattern that resembles a hand‑slapping style game. Edit the first person’s hand shapes so that, instead of cycling through scissors, rock, and paper, the first person always forms a closed fist that represents rock on every round; keep the motion of bringing the hand forward toward the second person but remove any distinct scissor or open‑palm paper poses. Adjust the second person’s responses so that they no longer alternate clearly through paper, rock, and paper; instead, have the second person twice refrain from clearly presenting a gesture by only slightly raising or hesitating with the hand, as if pretending not to make a move, while still remaining engaged and facing the first person. In the final exchange, synchronize both participants so that the first person and the second person simultaneously extend their arms and clearly form matching rock fists at the same moment, emphasizing that they choose the same gesture together. Keep the timing, rhythm, and overall number of interaction beats close to the source, but shift the intent from competitive finger‑guessing with varied outcomes to a playful, more repetitive hand‑slapping style game focused on the rock gesture and moments of deliberate non‑response by the second person.",
+      "confidence": 0.86,
+      "rationale": [
+        "Descriptions specify that the source is a finger‑guessing game with varying gestures while the target keeps them seated but standardizes choices to rock and adds pretend non‑moves and a final simultaneous rock.",
+        "Sequence images show similar facing, spacing, and low overall body motion, implying that modifications are mainly in hand shapes, timing emphasis, and interaction intent rather than large‑scale body or positional changes."
+      ],
+      "final": "Change to a repetitive rock-only hand-slapping game, add second person hesitations."
+    }
+  },
+  {
+    "id": 9191,
+    "m1": {
+      "name": "G017T003A015R000",
+      "org_des": "first person steps on second person's right foot, causing second person's foot to recoil slightly."
+    },
+    "m2": {
+      "name": "G051T001A005R002_swap",
+      "org_des": "first person and second person are positioned opposite each other. first person proceeds to move ahead, extends first person's left foot, and strikes the right calf of second person. second person raises second person's right foot and retreats a few steps."
+    },
+    "m_sim": 0.8642722368240356,
+    "t_sim": 0.6004805564880371,
+    "dist_diff": 0.08999999999999986,
+    "angle_diff_deg": 3.692693090463765,
+    "instruction": {
+      "detail": "Keep the initial facing so that the first person and second person remain opposite each other, but remove the action where the first person steps directly onto the second person's right foot. Instead of placing the first person’s foot down onto the second person’s right foot, have the first person move forward a bit toward the second person, shifting weight slightly onto the supporting leg to prepare a kicking motion. Animate the first person extending the left leg forward in a more forceful, swinging motion rather than a downward step, directing the lower leg and foot toward the outer side of the second person’s right calf. Change the contact point so that the first person’s left foot makes a striking impact against the right calf of the second person, at about shin level, instead of pressing down on the top of the foot. Intensify the interaction so that the contact looks like a deliberate kick, with a clear extension and a quick recoil of the first person’s kicking leg after impact, rather than a small, weight-bearing step. Replace the second person’s small recoil of the foot with a larger defensive reaction: as the kick lands, animate the second person lifting the right foot off the ground, bending the knee as if protecting or pulling the leg away from the impact. Add backward movement for the second person: after raising the right foot, have the second person hop or step back and then continue to retreat a few steps, keeping the upper body angled away from the incoming kick. Adjust timing so the moment of impact is sharper and slightly faster than the original step, followed by a longer follow-through where the second person staggers and moves back over multiple steps rather than just a brief foot recoil. Maintain the general facing direction between them throughout, but emphasize that the first person advances slightly while kicking and the second person yields ground by moving backward. Overall, transform the subtle, accidental-looking step on the foot into a clear, intentional kicking action to the right calf, with a stronger, more evasive retreat from the second person after being struck.",
+      "confidence": 0.93,
+      "rationale": [
+        "The target explicitly changes the contact from stepping on the right foot to kicking and striking the right calf, so the instruction must alter contact point, trajectory, and intent accordingly.",
+        "The target adds that the first person moves ahead and that the second person raises the right foot and retreats a few steps, which justifies adding forward motion for the first person, backward retreat for the second person, and adjusted timing with a sharper impact and longer recovery."
+      ],
+      "final": "Change accidental foot step to deliberate left‑foot calf kick, make second person hop back."
+    }
+  },
+  {
+    "id": 30,
+    "m1": {
+      "name": "G046T004A024R022",
+      "org_des": "first person and second person are positioned opposite each other, wherein first person performs a gesture of respect towards second person, and second person in turn mirrors the same act of reverence towards first person."
+    },
+    "m2": {
+      "name": "G049T005A024R023_swap",
+      "org_des": "first person and second person stand facing each other, with first person genuflecting and bowing to second person, and second person reciprocating the gesture by genuflecting and bowing back to first person."
+    },
+    "m_sim": 0.9839537143707275,
+    "t_sim": 0.9172744750976562,
+    "dist_diff": 0.010000000000000009,
+    "angle_diff_deg": 0.5765919210656043,
+    "instruction": {
+      "detail": "Keep the first person and second person standing opposite and facing each other in the same positions as in the source motion. Replace the generic gesture of respect performed by the first person with a clear genuflection: have the first person lower one knee toward or onto the ground while simultaneously bending at the waist into a noticeable bow directed toward the second person. Ensure the first person’s upper body leans forward in a controlled bow while the head and gaze are oriented respectfully toward the second person during the genuflection. After the first person completes this genuflecting bow, keep the timing and reciprocal structure, but change the second person’s mirrored response from a generic reverence gesture to the same explicit genuflection and bow motion: the second person also drops one knee and bends at the waist toward the first person. Maintain the synchronous and symmetric interaction pattern so that the second person’s genuflecting bow closely matches the depth, speed, and direction of the first person’s movement, emphasizing a mutual, formal exchange of respect. Preserve the overall facing orientation, distance between them, and respectful intent from the source, only sharpening the motion into a distinct knee bend plus forward bow for both participants, rather than an unspecified respectful gesture.",
+      "confidence": 0.94,
+      "rationale": [
+        "The target explicitly defines the respectful gesture as genuflecting and bowing for both participants, whereas the source only mentions a general gesture of respect and a mirrored act of reverence, so the main edit is to specify and deepen the motion into a knee bend plus torso bow.",
+        "Both source and target keep the two people facing each other and mirroring the interaction, so position, orientation, and reciprocity are preserved while only the exact form and clarity of the bending respect gesture are changed."
+      ],
+      "final": "Change both generic respect gestures into matching kneeling bows."
+    }
+  },
+  {
+    "id": 7214,
+    "m1": {
+      "name": "G050T000A003R018",
+      "org_des": "first person and second person face each other. first person takes two steps forward with first person's right leg, while second person reaches out with both hands and grabs first person's left lower arm, causing first person to also take two steps forward."
+    },
+    "m2": {
+      "name": "G051T000A003R016_swap",
+      "org_des": "first person reaches out with both hands, grabs second person's hand, and pulls second person's hand back while second person is being pulled forward."
+    },
+    "m_sim": 0.896670937538147,
+    "t_sim": 0.9869137406349182,
+    "dist_diff": 0.010000000000000009,
+    "angle_diff_deg": 2.6392741209618564,
+    "instruction": {
+      "detail": "Keep the initial setup where first person and second person face each other, but remove the part where first person initiates by stepping forward with the right leg and where second person reaches out first. Instead, have first person remain in place and actively initiate the interaction by reaching both hands forward toward second person, rather than walking. Change the contact so that first person uses both hands to grab one or both of second person's hands, instead of second person grabbing first person's left lower arm. Once the grab is established, have first person pull their arms and hands backward toward their own body, creating a clear backward pulling motion led by the upper body and arms, while the lower body stays mostly anchored rather than stepping forward. In response, second person should be passively pulled forward, allowing their whole body and center of mass to move toward first person, instead of second person being stationary and pulling first person forward. Remove the two forward steps that first person takes after being grabbed in the source motion, and instead emphasize the forward displacement of second person as they are dragged closer by first person's pull. Maintain the facing orientation between first person and second person throughout, but invert the roles so that first person is the active puller and second person is the one whose body is moved by the grab. Ensure the overall intent shifts from second person initiating the grab and causing first person to advance, to first person initiating the grab and using a firm backward pull to draw second person toward them.",
+      "confidence": 0.93,
+      "rationale": [
+        "The target explicitly states that first person reaches out, grabs second person's hand, and pulls, whereas the source has second person reaching out and grabbing first person's arm and causing first person to move forward, so the instruction must swap initiator and responder roles and change who moves whom.",
+        "The source describes forward steps by first person both before and after the grab, while the target emphasizes a pulling action that brings second person forward, so the edit must remove first person's forward stepping and instead add second person's forward displacement caused by first person's backward pulling motion."
+      ],
+      "final": "Make first person grab and pull second person's hands forward"
+    }
+  },
+  {
+    "id": 5727,
+    "m1": {
+      "name": "G010T003A019R016_swap",
+      "org_des": "first person and second person stand side by side, with first person using both hands to support second person's left arm, while second person limps second person's left leg as first person and second person walk forward together."
+    },
+    "m2": {
+      "name": "G054T004A019R024",
+      "org_des": "first person assists second person's left hand and first person and second person walk forward a few steps together."
+    },
+    "m_sim": 0.9143567681312561,
+    "t_sim": 0.9307609796524048,
+    "dist_diff": 0.17999999999999994,
+    "angle_diff_deg": 1.3205554144458167,
+    "instruction": {
+      "detail": "Keep the initial setup where first person and second person stand side by side and walk forward together, but remove any limping behavior in the second person’s left leg so that both of second person’s legs move in a normal, coordinated walking pattern. Adjust the support so that first person is no longer using both hands to hold and stabilize second person’s left arm; instead, reposition first person’s contact to focus specifically on assisting second person’s left hand, such as gently holding or guiding the left hand while they walk. Maintain the forward walking direction, but shorten the overall walking sequence so that first person and second person move forward only a few steps instead of continuously. Preserve their side by side orientation and general walking rhythm, only simplifying the interaction to a light, hand-focused assistance rather than a more intensive arm and leg support.",
+      "confidence": 0.86,
+      "rationale": [
+        "The source describes intensive support of the second person’s left arm and a limping left leg, while the target mentions only assisting the left hand and does not mention limping, implying normal walking and reduced support intensity.",
+        "The source has them walking forward together without an explicit endpoint, whereas the target specifies walking forward a few steps, indicating a shorter, simpler walking sequence with similar side by side orientation and direction."
+      ],
+      "final": "Remove limping, support only second person’s left hand, walk fewer steps"
+    }
+  },
+  {
+    "id": 1789,
+    "m1": {
+      "name": "G043T001A009R028",
+      "org_des": "first person sits in a chair, and second person walks up to first person's left side, facing first person, and sits on first person's left leg while hugging first person's neck with second person's right hand."
+    },
+    "m2": {
+      "name": "G054T001A009R023",
+      "org_des": "first person sits on second person's left leg, facing left. second person hugs first person from behind, placing second person's arms around first person's waist."
+    },
+    "m_sim": 0.9508801698684692,
+    "t_sim": 0.8512478470802307,
+    "dist_diff": 0.16000000000000003,
+    "angle_diff_deg": 1.6713059134276644,
+    "instruction": {
+      "detail": "Keep the overall setting and timing where two people end in a close seated interaction, but invert which person is sitting on the other and reorient their bodies so they match the target configuration. Begin from the moment when the second person in the source has just sat on the first person’s left leg and is hugging around the first person’s neck, with the first person seated facing roughly forward. From here, gradually shift the weight relationship so that the first person becomes the one who moves onto and sits on the second person’s left leg, while the second person remains the supporting sitter. Have the first person lean slightly forward and to their left, stand or partially rise just enough to reposition, then turn their torso and hips so they end up seated sideways, facing to their own left, on top of the second person’s left leg. At the same time, keep the second person close and mostly in place, but transition them from facing the first person to being directly behind the first person, aligned with the first person’s back and facing the same general direction. Remove the neck hug: the second person’s right arm should release from around the first person’s neck and, together with the left arm, travel down and forward to wrap around the first person’s midsection from behind, forming a two‑arm hug around the first person’s waist. Ensure the final posture is stable and intimate: the first person is clearly seated on the second person’s left leg, oriented to the left with a relaxed upper body, while the second person is slightly behind and to the right, torso close to the first person’s back, both arms encircling the first person’s waist, with minimal unnecessary extra movement elsewhere in the body.",
+      "confidence": 0.86,
+      "rationale": [
+        "Source description states that initially the first person sits in a chair while the second person approaches and sits on the first person’s left leg, hugging the neck, whereas the target requires the first person to sit on the second person’s left leg, facing left, with the second person behind and hugging the waist.",
+        "The target sequence images show a relatively static, final pose with both people closely aligned and the second person behind, so the instruction focuses on swapping who is on whose leg, rotating the first person to face left, and changing the hug from neck‑front to waist‑from‑behind while preserving overall intimacy and seated interaction."
+      ],
+      "final": "Make first person sit on second person’s left leg, second person behind hugging waist."
+    }
+  },
+  {
+    "id": 8324,
+    "m1": {
+      "name": "G028T005A023R003",
+      "org_des": "first person places first person's left hand on second person's left shoulder and first person and second person walk forward together."
+    },
+    "m2": {
+      "name": "G052T004A022R016",
+      "org_des": "first person puts first person's arm around second person's hand and first person and second person walk forward side by side."
+    },
+    "m_sim": 0.8796727061271667,
+    "t_sim": 0.6390834450721741,
+    "dist_diff": 0.12,
+    "angle_diff_deg": 0.5289580678244579,
+    "instruction": {
+      "detail": "Keep the overall timing, walking speed, and forward direction of both people the same as in the source, with the first person remaining slightly closer to the camera and the second person beside them, and preserve the natural synchronized walk cycle of their legs and torsos. Starting from the initial contact, gradually remove the specific pose where the first person’s left hand rests on the second person’s left shoulder so that the first person is no longer touching the shoulder from behind or above. Reposition the first person so that they walk clearly side by side with the second person at roughly the same depth, with their torsos and hips aligned and facing forward together rather than in a slightly staggered or behind-shoulder position. As they come side by side, rotate the first person’s upper body slightly toward the second person and bend the first person’s left elbow so that the left forearm comes forward and down alongside the first person’s torso instead of reaching up to the shoulder. Bring the second person’s corresponding arm into a more neutral, relaxed down position at their side at first, then adjust it so the forearm comes close to the first person’s side to allow linking. Create the new interaction by having the first person slide the left forearm and wrist in front of and slightly under the second person’s near arm so that their arms interlock, forming a linked-arm position rather than a hand-on-shoulder pose. Ensure the contact point shifts from the second person’s shoulder to the area around both people’s forearms and hands, with the first person’s left arm looping around or hooking through the second person’s arm while both elbows stay comfortably bent. Once the arms are linked, maintain this linked-arm configuration consistently throughout the forward walk, keeping the distance between their bodies similar to the source and preserving a natural side-by-side gait with only minor upper-body adjustments to accommodate the new arm connection. Throughout the motion, avoid large changes to stride length, head orientation, and overall walking rhythm, only adding subtle sideward lean or slight inward rotation of the shoulders that naturally results from walking while their arms are linked.",
+      "confidence": 0.91,
+      "rationale": [
+        "The descriptions and interaction_change clearly specify changing from a hand-on-shoulder contact to a side-by-side linked-arm configuration while continuing to walk forward together.",
+        "The sequence images show similar forward walking with small positional and orientation differences, so keeping speed and gait similar while adjusting arm poses and body alignment is a well-supported interpretation."
+      ],
+      "final": "Change hand-on-shoulder to linked arms while walking side by side."
+    }
+  },
+  {
+    "id": 7723,
+    "m1": {
+      "name": "G013T003A011R011",
+      "org_des": "first person stands while second person walks to first person's left side. second person then uses second person's left hand to grab first person's left arm and raises second person's right hand to gently pat first person's back in a continuous and low manner."
+    },
+    "m2": {
+      "name": "G027T002A011R006_swap",
+      "org_des": "first person stands behind second person on the right, pats second person on the back with first person's left hand, and second person turns second person's head to the right."
+    },
+    "m_sim": 0.8889344334602356,
+    "t_sim": 0.7627026438713074,
+    "dist_diff": 0.13,
+    "angle_diff_deg": 2.297408269483655,
+    "instruction": {
+      "detail": "Modify the motion so that the overall interaction is reversed in roles and spatial layout while keeping the pat on the back as the core action. Keep the first person mostly stationary, but reposition the characters so that, instead of standing in front of each other, the first person ends up standing behind and slightly to the right of the second person. Remove the sequence where the second person walks to the first person's left side, grabs the first person's left arm with the second person's left hand, and then pats the first person. Instead, have the first person start or move to a position behind the second person on the second person's right side, facing generally in the same direction as the second person. From this new position, make the first person lift the first person's left arm and use the left hand to pat the second person on the back, maintaining a gentle, low-intensity patting style similar to the original but now initiated by the first person instead of the second. Eliminate the second person's arm-grabbing motion entirely and keep the second person's arms relaxed or neutral during the pat. Add a reaction from the second person: as the first person pats the second person's back, have the second person turn the second person's head toward the right, in the direction of the first person behind them, as if acknowledging the pat. Ensure the timing flows directly from the first person getting into position behind the second person, to the first person's left-hand patting action, followed by or overlapping with the second person's rightward head turn, with no walking-around or arm-grabbing phase in between.",
+      "confidence": 0.93,
+      "rationale": [
+        "The target description clearly changes who performs the pat, where they stand, and how they are oriented, while keeping the pat on the back as the key interaction, so the main edits involve role reversal, relative positioning, and hand usage.",
+        "The source-specific elements such as the second person's walk to the left side and the left-hand grab of the first person's arm are not present in the target, while the target introduces the first person behind and to the right plus the second person's head turn, so removing the walk and grab and adding the new positioning, patting configuration, and head turn are well supported."
+      ],
+      "final": "Swap roles and layout: first person stands behind-right, pats back, second person only turns head."
+    }
+  }
+]
