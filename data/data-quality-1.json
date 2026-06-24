@@ -24,6 +24,30 @@
     }
   },
   {
+    "id": 7140,
+    "m1": {
+      "name": "G012T002A014R021",
+      "org_des": "first person walks to the front of second person, with first person's right arm facing second person. Then, second person jumps up and bumps into first person using second person's right shoulder."
+    },
+    "m2": {
+      "name": "G031T001A005R001_swap",
+      "org_des": "first person kicks second person's stomach with first person's right foot, and second person takes a few steps back."
+    },
+    "m_sim": 0.8979129791259766,
+    "t_sim": 0.07128210365772247,
+    "dist_diff": 0.09999999999999987,
+    "angle_diff_deg": 0.8130826886336229,
+    "instruction": {
+      "detail": "Keep the initial approach of the first person toward the second person, but remove the part where the first person positions their right arm facing the second person and remove the second person’s jumping shoulder bump entirely. As the first person finishes approaching, rotate and adjust their stance so they face the second person directly at close range, with their weight settling onto the left leg and the right leg prepared to kick. Replace the original collision interaction with a forward kicking action initiated by the first person: have the first person lift the right knee, then extend the right leg to drive the right foot straight into the second person’s stomach area, using a firm, decisive front kick motion. Ensure the first person’s upper body leans slightly back or stays braced during the kick, with arms held naturally for balance and protection instead of reaching toward or colliding with the second person. At the moment of impact, remove the second person’s upward jump and right shoulder motion; instead, make the second person’s torso react to the stomach kick by bending or recoiling backward while their upper body pivots away from the contact point. After the impact, have the second person move backward with several small, staggered retreating steps, as if being pushed back by the force of the kick, rather than being knocked into the first person and bumping them. Let the first person retract the kicking leg back to a stable stance after the impact and remain mostly in place, maintaining balance and facing the second person, instead of being bumped or displaced by the second person’s motion.",
+      "confidence": 0.9,
+      "rationale": [
+        "Source motion features approach plus a jump-based shoulder bump initiated by the second person, while the target requires a kick initiated by the first person with the second person stepping back afterward.",
+        "The instruction preserves the initial approach but replaces the knocking shoulder collision with a right-foot kick to the stomach and adds backward steps and recoil for the second person, matching the described interaction and outcome."
+      ],
+      "final": "Replace shoulder bump with front kick to stomach, second person staggers backward."
+    }
+  },
+  {
     "id": 509,
     "m1": {
       "name": "G045T009A039R023",
@@ -1199,6 +1223,30 @@
         "The key differences are which limbs are used and the style of contact: source uses both hands on the second person’s right arm with a single pull, while target uses the first person’s left hand to grab the second person’s left hand and pulls them closer by a few steps, so the instruction focuses on changing the contact point, using one hand instead of two, and extending the pull so the second person walks forward for several steps."
       ],
       "final": "Change two‑hand right‑arm grab to gentle left‑hand handhold pull forward."
+    }
+  },
+  {
+    "id": 3589,
+    "m1": {
+      "name": "G034T004A018R016_swap",
+      "org_des": "first person stands and talks with second person, then first person walks up and whispers into second person's left ear."
+    },
+    "m2": {
+      "name": "G036T003A018R016",
+      "org_des": "first person walks to the right side of second person, covers second person's ears with first person's hands, and whispers to second person, who covers second person's mouth with second person's hands and steps back."
+    },
+    "m_sim": 0.934840202331543,
+    "t_sim": 0.9327040314674377,
+    "dist_diff": 0.11999999999999988,
+    "angle_diff_deg": 0.1429220414009426,
+    "instruction": {
+      "detail": "Keep the initial standing and talking segment between the first person and second person, but shorten the time spent simply talking so the transition into the whisper interaction happens a bit sooner. Change the approach: instead of the first person walking directly up to the second person’s side to whisper into the left ear, have the first person intentionally move to the right side of the second person, circling or stepping so they clearly end up on the second person’s right side. As the first person reaches the right side of the second person, reorient both bodies so they are close and slightly angled toward each other, with the first person turned toward the second person’s head in preparation to whisper. Before whispering, have the first person lift both hands and place them gently over both of the second person’s ears from behind or the side, clearly covering the ears instead of leaning in directly to one ear. Maintain the whisper interaction: the first person leans their head in close toward the side or back of the second person’s head and performs a whispering motion with small jaw and head movements, while their hands remain covering the second person’s ears. Add a reaction for the second person: as the whisper begins or immediately after, have the second person raise both hands to their own mouth and place them over their mouth in a self-covering gesture, as if surprised or trying to keep quiet. After the second person covers their mouth, make them take one or more small steps backward, moving away from the first person while keeping the hands over the mouth, so the interaction ends with a visible backward retreat instead of both people remaining close together. Ensure the overall flow emphasizes the change from a simple direct ear whisper to a more involved interaction where the first person covers the ears while whispering and the second person responds by covering their own mouth and stepping back.",
+      "confidence": 0.93,
+      "rationale": [
+        "The target explicitly moves the first person to the right side of the second person and adds the action of covering the second person’s ears, which must replace the direct left-ear whisper from the source.",
+        "The target introduces new reaction motions for the second person, specifically covering their own mouth and stepping back, which are not present in the source and therefore need to be added as clear edits to the original whisper interaction."
+      ],
+      "final": "Shorten talking, move first person to right side, cover ears while whispering, second person covers mouth and steps back"
     }
   }
 ]
