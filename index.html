@@ -700,8 +700,19 @@
     }
 
     async function resolveRoute() {
-      const routeId = location.hash.replace("#", "") || "home";
+      const requestedRouteId = location.hash.replace("#", "");
+      const lockedRouteId = sessionStorage.getItem("lockedDataQualityRoute");
+
+      if (!requestedRouteId && lockedRouteId) {
+        window.location.replace(`${window.location.pathname}${window.location.search}#${lockedRouteId}`);
+        return;
+      }
+
+      const routeId = requestedRouteId || "home";
       state.routeId = routes.some((route) => route.id === routeId) ? routeId : "home";
+      if (state.routeId.startsWith("dq")) {
+        sessionStorage.setItem("lockedDataQualityRoute", state.routeId);
+      }
       state.currentSampleIndex = 0;
       state.answers = state.routeId.startsWith("dq") ? loadAnswers(state.routeId) : {};
       if (state.routeId.startsWith("dq")) {
@@ -765,7 +776,7 @@
           <h2>${title}</h2>
           <div class="home-links">
             ${items.map((item) => `
-              <a class="home-card" href="#${item.id}">
+              <a class="home-card" href="#${item.id}" data-route-id="${item.id}">
                 <span>
                   <strong>${item.title}</strong>
                   <span>${item.description}</span>
@@ -863,8 +874,14 @@
 
     function attachHomeEvents() {
       document.querySelectorAll(".home-card").forEach((link) => {
-        link.addEventListener("click", () => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
           state.currentSampleIndex = 0;
+          const routeId = link.dataset.routeId;
+          if (routeId.startsWith("dq")) {
+            sessionStorage.setItem("lockedDataQualityRoute", routeId);
+          }
+          window.location.replace(`${window.location.pathname}${window.location.search}#${routeId}`);
         });
       });
     }
