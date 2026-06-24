@@ -1,10 +1,1003 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-  <title>Minyeong Kim</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motion Data Evaluation</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f6f8;
+      --panel: #ffffff;
+      --panel-soft: #eef3f7;
+      --text: #17202a;
+      --muted: #687582;
+      --line: #d8e0e7;
+      --primary: #2268d8;
+      --primary-soft: #e8f0ff;
+      --success: #1b8f5a;
+      --warning: #bf6a02;
+      --danger: #c43b3b;
+      --shadow: 0 18px 45px rgba(29, 43, 58, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, "Noto Sans KR", sans-serif;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .app-shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 28px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(244, 246, 248, 0.94);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .brand strong {
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .home-link,
+    .submit-button,
+    .secondary-button {
+      min-height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--panel);
+      color: var(--text);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 14px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+    }
+
+    .home-link:hover,
+    .secondary-button:hover {
+      border-color: #aab8c5;
+      transform: translateY(-1px);
+    }
+
+    .submit-button {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .submit-button:disabled {
+      cursor: not-allowed;
+      opacity: 0.55;
+      transform: none;
+    }
+
+    main {
+      flex: 1;
+      width: min(1420px, 100%);
+      margin: 0 auto;
+      padding: 30px 28px 42px;
+    }
+
+    .home {
+      display: grid;
+      gap: 26px;
+    }
+
+    .home-hero {
+      padding: 36px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .home-hero h1 {
+      margin: 0 0 12px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+
+    .home-hero p {
+      max-width: 780px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .link-groups {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .link-group {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+    }
+
+    .link-group h2 {
+      margin: 0 0 16px;
+      font-size: 20px;
+    }
+
+    .home-links {
+      display: grid;
+      gap: 12px;
+    }
+
+    .home-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 72px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fbfcfd;
+      text-decoration: none;
+      transition: border-color 140ms ease, transform 140ms ease, background 140ms ease;
+    }
+
+    .home-card:hover {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+      transform: translateY(-1px);
+    }
+
+    .home-card strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .home-card span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .home-card em {
+      color: var(--primary);
+      font-style: normal;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .eval-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .sample-panel,
+    .progress-panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .sample-panel {
+      min-width: 0;
+      padding: 22px;
+    }
+
+    .sample-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 16px;
+    }
+
+    .sample-title h1 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.25;
+    }
+
+    .sample-title p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .sample-index {
+      padding: 8px 10px;
+      border-radius: 7px;
+      background: var(--panel-soft);
+      color: var(--muted);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .video-box {
+      min-width: 0;
+    }
+
+    .video-box h2 {
+      margin: 0 0 8px;
+      font-size: 15px;
+    }
+
+    video,
+    .video-placeholder {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #111922;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #c9d3dd;
+      text-align: center;
+      line-height: 1.45;
+      padding: 18px;
+    }
+
+    video {
+      object-fit: contain;
+      padding: 0;
+    }
+
+    .instruction-box {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fbfcfd;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+
+    .instruction-box h2 {
+      margin: 0 0 8px;
+      font-size: 15px;
+    }
+
+    .instruction-box p {
+      margin: 0;
+      line-height: 1.65;
+      color: #2a3440;
+    }
+
+    .questions {
+      display: grid;
+      gap: 14px;
+    }
+
+    .question-block {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 16px;
+    }
+
+    .question-block h2 {
+      margin: 0 0 10px;
+      font-size: 17px;
+    }
+
+    .question-block p {
+      margin: 0 0 12px;
+      line-height: 1.55;
+    }
+
+    .radio-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .radio-card {
+      min-width: 120px;
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      cursor: pointer;
+      background: #fff;
+    }
+
+    .radio-card:has(input:checked) {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+      color: #0e4397;
+      font-weight: 700;
+    }
+
+    .comment-field {
+      width: 100%;
+      min-height: 76px;
+      resize: vertical;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 12px;
+      line-height: 1.45;
+    }
+
+    .progress-panel {
+      position: sticky;
+      top: 86px;
+      padding: 18px;
+      max-height: calc(100vh - 110px);
+      overflow: auto;
+    }
+
+    .progress-panel h2 {
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+
+    .progress-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .progress-bar {
+      height: 10px;
+      border-radius: 999px;
+      background: var(--panel-soft);
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+
+    .progress-bar span {
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: var(--success);
+      transition: width 160ms ease;
+    }
+
+    .sample-list {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .sample-button {
+      aspect-ratio: 1;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+      cursor: pointer;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .sample-button.current {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .sample-button.complete {
+      border-color: rgba(27, 143, 90, 0.45);
+      color: var(--success);
+      background: #e8f7ef;
+    }
+
+    .sample-button.partial {
+      border-color: rgba(191, 106, 2, 0.45);
+      color: var(--warning);
+      background: #fff5e8;
+    }
+
+    .reviewer-fields {
+      display: grid;
+      gap: 10px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .field {
+      display: grid;
+      gap: 6px;
+    }
+
+    .field label {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .field input {
+      min-height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 0 10px;
+    }
+
+    .status-text {
+      min-height: 20px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .status-text.error {
+      color: var(--danger);
+    }
+
+    .status-text.success {
+      color: var(--success);
+    }
+
+    .empty-state {
+      min-height: 320px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: var(--muted);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 24px;
+    }
+
+    @media (max-width: 980px) {
+      .eval-layout,
+      .link-groups {
+        grid-template-columns: 1fr;
+      }
+
+      .progress-panel {
+        position: static;
+        max-height: none;
+        order: -1;
+      }
+
+      .sample-list {
+        grid-template-columns: repeat(10, 1fr);
+      }
+    }
+
+    @media (max-width: 680px) {
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 16px;
+      }
+
+      main {
+        padding: 18px 14px 30px;
+      }
+
+      .home-hero {
+        padding: 24px;
+      }
+
+      .home-hero h1 {
+        font-size: 26px;
+      }
+
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sample-header {
+        flex-direction: column;
+      }
+
+      .sample-list {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, this is my website!</h1>
-  <p>Welcome to my GitHub Pages site.</p>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <strong>Motion Data Evaluation</strong>
+        <span id="page-subtitle">Data quality and baseline review</span>
+      </div>
+      <div class="top-actions" id="top-actions"></div>
+    </header>
+    <main id="app"></main>
+  </div>
+
+  <script>
+    const GOOGLE_SCRIPT_URL = "";
+    const SAMPLE_COUNT = 50;
+
+    const DATASETS = {
+      dq1: createSamples("data-quality-1", "Data Quality 검증 1"),
+      dq2: createSamples("data-quality-2", "Data Quality 검증 2"),
+      dq3: createSamples("data-quality-3", "Data Quality 검증 3")
+    };
+
+    const routes = [
+      { id: "dq1", type: "data-quality", title: "Data Quality 검증 1", description: "샘플 세트 1" },
+      { id: "dq2", type: "data-quality", title: "Data Quality 검증 2", description: "샘플 세트 2" },
+      { id: "dq3", type: "data-quality", title: "Data Quality 검증 3", description: "샘플 세트 3" },
+      { id: "baseline1", type: "baseline", title: "Baseline 평가 1", description: "추후 포맷 추가 예정" },
+      { id: "baseline2", type: "baseline", title: "Baseline 평가 2", description: "추후 포맷 추가 예정" },
+      { id: "baseline3", type: "baseline", title: "Baseline 평가 3", description: "추후 포맷 추가 예정" }
+    ];
+
+    const state = {
+      routeId: "home",
+      currentSampleIndex: 0,
+      answers: {},
+      reviewerName: localStorage.getItem("reviewerName") || "",
+      reviewerEmail: localStorage.getItem("reviewerEmail") || ""
+    };
+
+    function createSamples(datasetId, datasetTitle) {
+      return Array.from({ length: SAMPLE_COUNT }, (_, index) => {
+        const sampleNumber = index + 1;
+        return {
+          id: `${datasetId}-sample-${String(sampleNumber).padStart(2, "0")}`,
+          title: `Sample ${sampleNumber}`,
+          datasetId,
+          datasetTitle,
+          sourceVideo: `assets/${datasetId}/source_${String(sampleNumber).padStart(2, "0")}.mp4`,
+          targetVideo: `assets/${datasetId}/target_${String(sampleNumber).padStart(2, "0")}.mp4`,
+          instruction: "Replace this placeholder with the instruction from source motion to target motion."
+        };
+      });
+    }
+
+    function getAnswerKey(routeId) {
+      return `motion-eval-${routeId}`;
+    }
+
+    function loadAnswers(routeId) {
+      try {
+        return JSON.parse(localStorage.getItem(getAnswerKey(routeId))) || {};
+      } catch (error) {
+        return {};
+      }
+    }
+
+    function saveAnswers() {
+      if (!state.routeId.startsWith("dq")) return;
+      localStorage.setItem(getAnswerKey(state.routeId), JSON.stringify(state.answers));
+    }
+
+    function navigate(routeId) {
+      location.hash = routeId === "home" ? "" : routeId;
+    }
+
+    function resolveRoute() {
+      const routeId = location.hash.replace("#", "") || "home";
+      state.routeId = routes.some((route) => route.id === routeId) ? routeId : "home";
+      state.currentSampleIndex = 0;
+      state.answers = state.routeId.startsWith("dq") ? loadAnswers(state.routeId) : {};
+      render();
+    }
+
+    function render() {
+      const app = document.getElementById("app");
+      const subtitle = document.getElementById("page-subtitle");
+      const actions = document.getElementById("top-actions");
+      actions.innerHTML = "";
+
+      if (state.routeId === "home") {
+        subtitle.textContent = "Data quality and baseline review";
+        app.innerHTML = homeTemplate();
+        attachHomeEvents();
+        return;
+      }
+
+      const route = routes.find((item) => item.id === state.routeId);
+      subtitle.textContent = route.title;
+      actions.innerHTML = `<button class="home-link" type="button" data-home>Home</button>`;
+      actions.querySelector("[data-home]").addEventListener("click", () => navigate("home"));
+
+      if (route.type === "baseline") {
+        app.innerHTML = `<div class="empty-state"><div><h1>${route.title}</h1><p>Baseline 평가 포맷을 받으면 이 영역에 같은 방식으로 연결할 수 있습니다.</p></div></div>`;
+        return;
+      }
+
+      app.innerHTML = evaluationTemplate(route);
+      attachEvaluationEvents();
+      renderSample();
+      renderProgress();
+    }
+
+    function homeTemplate() {
+      const dataQuality = routes.filter((route) => route.type === "data-quality");
+      const baseline = routes.filter((route) => route.type === "baseline");
+      return `
+        <section class="home">
+          <div class="home-hero">
+            <h1>Motion Data Quality Review</h1>
+            <p>Source motion, target motion, instruction을 함께 보면서 Instruction Quality와 Editability를 평가하는 GitHub Pages용 정적 평가 사이트입니다.</p>
+          </div>
+          <div class="link-groups">
+            ${homeGroupTemplate("Data Quality 검증", dataQuality)}
+            ${homeGroupTemplate("Baseline 평가", baseline)}
+          </div>
+        </section>
+      `;
+    }
+
+    function homeGroupTemplate(title, items) {
+      return `
+        <section class="link-group">
+          <h2>${title}</h2>
+          <div class="home-links">
+            ${items.map((item) => `
+              <a class="home-card" href="#${item.id}">
+                <span>
+                  <strong>${item.title}</strong>
+                  <span>${item.description}</span>
+                </span>
+                <em>Open</em>
+              </a>
+            `).join("")}
+          </div>
+        </section>
+      `;
+    }
+
+    function evaluationTemplate(route) {
+      return `
+        <div class="eval-layout">
+          <section class="sample-panel">
+            <div class="sample-header">
+              <div class="sample-title">
+                <h1 id="sample-title"></h1>
+                <p id="sample-description"></p>
+              </div>
+              <div class="sample-index" id="sample-index"></div>
+            </div>
+            <div class="video-grid">
+              <div class="video-box">
+                <h2>Source Motion</h2>
+                <div id="source-video"></div>
+              </div>
+              <div class="video-box">
+                <h2>Target Motion</h2>
+                <div id="target-video"></div>
+              </div>
+            </div>
+            <div class="instruction-box">
+              <h2>Instruction</h2>
+              <p id="instruction-text"></p>
+            </div>
+            <div class="questions">
+              <section class="question-block">
+                <h2>Instruction Quality</h2>
+                <p>Does the instruction correctly describe the change from the source motion to the target motion?</p>
+                <div class="radio-row">
+                  ${radioTemplate("instructionQuality", "yes", "Yes")}
+                  ${radioTemplate("instructionQuality", "no", "No")}
+                </div>
+              </section>
+              <section class="question-block">
+                <h2>Editability</h2>
+                <p>Is the source-target pair a realistic motion editing pair?</p>
+                <div class="radio-row">
+                  ${radioTemplate("editability", "yes", "Yes")}
+                  ${radioTemplate("editability", "no", "No")}
+                </div>
+              </section>
+              <section class="question-block">
+                <h2>Comment</h2>
+                <textarea class="comment-field" id="comment" placeholder="Optional note"></textarea>
+              </section>
+            </div>
+          </section>
+          <aside class="progress-panel">
+            <h2>${route.title}</h2>
+            <div class="progress-summary">
+              <span id="progress-count"></span>
+              <span id="progress-percent"></span>
+            </div>
+            <div class="progress-bar"><span id="progress-fill"></span></div>
+            <div class="sample-list" id="sample-list"></div>
+            <div class="reviewer-fields">
+              <div class="field">
+                <label for="reviewer-name">Reviewer name</label>
+                <input id="reviewer-name" type="text" autocomplete="name" value="${escapeHtml(state.reviewerName)}">
+              </div>
+              <div class="field">
+                <label for="reviewer-email">Reviewer email or ID</label>
+                <input id="reviewer-email" type="text" autocomplete="email" value="${escapeHtml(state.reviewerEmail)}">
+              </div>
+              <button class="submit-button" id="submit-button" type="button">Submit to Sheet</button>
+              <button class="secondary-button" id="download-button" type="button">Download JSON</button>
+              <div class="status-text" id="status-text"></div>
+            </div>
+          </aside>
+        </div>
+      `;
+    }
+
+    function radioTemplate(name, value, label) {
+      return `
+        <label class="radio-card">
+          <input type="radio" name="${name}" value="${value}">
+          <span>${label}</span>
+        </label>
+      `;
+    }
+
+    function attachHomeEvents() {
+      document.querySelectorAll(".home-card").forEach((link) => {
+        link.addEventListener("click", () => {
+          state.currentSampleIndex = 0;
+        });
+      });
+    }
+
+    function attachEvaluationEvents() {
+      document.querySelectorAll("input[type='radio']").forEach((input) => {
+        input.addEventListener("change", updateCurrentAnswer);
+      });
+
+      document.getElementById("comment").addEventListener("input", updateCurrentAnswer);
+      document.getElementById("submit-button").addEventListener("click", submitAnswers);
+      document.getElementById("download-button").addEventListener("click", downloadAnswers);
+
+      document.getElementById("reviewer-name").addEventListener("input", (event) => {
+        state.reviewerName = event.target.value.trim();
+        localStorage.setItem("reviewerName", state.reviewerName);
+      });
+
+      document.getElementById("reviewer-email").addEventListener("input", (event) => {
+        state.reviewerEmail = event.target.value.trim();
+        localStorage.setItem("reviewerEmail", state.reviewerEmail);
+      });
+    }
+
+    function getCurrentSample() {
+      return DATASETS[state.routeId][state.currentSampleIndex];
+    }
+
+    function renderSample() {
+      const sample = getCurrentSample();
+      const answer = state.answers[sample.id] || {};
+
+      document.getElementById("sample-title").textContent = sample.title;
+      document.getElementById("sample-description").textContent = sample.datasetTitle;
+      document.getElementById("sample-index").textContent = `${state.currentSampleIndex + 1} / ${SAMPLE_COUNT}`;
+      document.getElementById("instruction-text").textContent = sample.instruction;
+      renderVideo("source-video", sample.sourceVideo, "Source video file not found yet.");
+      renderVideo("target-video", sample.targetVideo, "Target video file not found yet.");
+
+      document.querySelectorAll("input[name='instructionQuality']").forEach((input) => {
+        input.checked = answer.instructionQuality === input.value;
+      });
+
+      document.querySelectorAll("input[name='editability']").forEach((input) => {
+        input.checked = answer.editability === input.value;
+      });
+
+      document.getElementById("comment").value = answer.comment || "";
+    }
+
+    function renderVideo(containerId, src, fallbackText) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = `
+        <video controls preload="metadata">
+          <source src="${src}" type="video/mp4">
+        </video>
+      `;
+      const video = container.querySelector("video");
+      video.addEventListener("error", () => {
+        container.innerHTML = `<div class="video-placeholder">${fallbackText}<br>${src}</div>`;
+      }, { once: true });
+    }
+
+    function updateCurrentAnswer() {
+      const sample = getCurrentSample();
+      const instructionQuality = document.querySelector("input[name='instructionQuality']:checked")?.value || "";
+      const editability = document.querySelector("input[name='editability']:checked")?.value || "";
+      const comment = document.getElementById("comment").value.trim();
+
+      state.answers[sample.id] = {
+        sampleId: sample.id,
+        datasetId: sample.datasetId,
+        instructionQuality,
+        editability,
+        comment,
+        updatedAt: new Date().toISOString()
+      };
+
+      saveAnswers();
+      renderProgress();
+    }
+
+    function renderProgress() {
+      const samples = DATASETS[state.routeId];
+      const completed = samples.filter((sample) => isComplete(state.answers[sample.id])).length;
+      const percent = Math.round((completed / samples.length) * 100);
+      document.getElementById("progress-count").textContent = `${completed} / ${samples.length} checked`;
+      document.getElementById("progress-percent").textContent = `${percent}%`;
+      document.getElementById("progress-fill").style.width = `${percent}%`;
+
+      const list = document.getElementById("sample-list");
+      list.innerHTML = samples.map((sample, index) => {
+        const answer = state.answers[sample.id];
+        const statusClass = isComplete(answer) ? "complete" : isPartial(answer) ? "partial" : "";
+        const currentClass = index === state.currentSampleIndex ? "current" : "";
+        return `<button class="sample-button ${statusClass} ${currentClass}" type="button" data-sample-index="${index}">${index + 1}</button>`;
+      }).join("");
+
+      list.querySelectorAll("[data-sample-index]").forEach((button) => {
+        button.addEventListener("click", () => {
+          state.currentSampleIndex = Number(button.dataset.sampleIndex);
+          renderSample();
+          renderProgress();
+          document.querySelector(".sample-panel").scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+    }
+
+    function isComplete(answer) {
+      return Boolean(answer?.instructionQuality && answer?.editability);
+    }
+
+    function isPartial(answer) {
+      return Boolean(answer && !isComplete(answer) && (answer.instructionQuality || answer.editability || answer.comment));
+    }
+
+    function buildPayload() {
+      const samples = DATASETS[state.routeId];
+      return {
+        submittedAt: new Date().toISOString(),
+        routeId: state.routeId,
+        datasetTitle: routes.find((route) => route.id === state.routeId).title,
+        reviewerName: state.reviewerName,
+        reviewerEmail: state.reviewerEmail,
+        answers: samples.map((sample, index) => ({
+          order: index + 1,
+          sampleId: sample.id,
+          sourceVideo: sample.sourceVideo,
+          targetVideo: sample.targetVideo,
+          instruction: sample.instruction,
+          instructionQuality: state.answers[sample.id]?.instructionQuality || "",
+          editability: state.answers[sample.id]?.editability || "",
+          comment: state.answers[sample.id]?.comment || "",
+          updatedAt: state.answers[sample.id]?.updatedAt || ""
+        }))
+      };
+    }
+
+    async function submitAnswers() {
+      const status = document.getElementById("status-text");
+      const button = document.getElementById("submit-button");
+      status.className = "status-text";
+
+      state.reviewerName = document.getElementById("reviewer-name").value.trim();
+      state.reviewerEmail = document.getElementById("reviewer-email").value.trim();
+      localStorage.setItem("reviewerName", state.reviewerName);
+      localStorage.setItem("reviewerEmail", state.reviewerEmail);
+
+      if (!state.reviewerName) {
+        status.textContent = "Reviewer name을 입력해 주세요.";
+        status.classList.add("error");
+        return;
+      }
+
+      if (!GOOGLE_SCRIPT_URL) {
+        status.textContent = "Google Apps Script URL이 아직 설정되지 않았습니다. 대신 JSON 다운로드를 사용할 수 있습니다.";
+        status.classList.add("error");
+        return;
+      }
+
+      button.disabled = true;
+      status.textContent = "Submitting...";
+
+      try {
+        const response = await fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(buildPayload())
+        });
+        status.textContent = "Submitted. Google Sheet에서 결과를 확인해 주세요.";
+        status.classList.add("success");
+      } catch (error) {
+        status.textContent = "Submit failed. 네트워크 또는 Apps Script 설정을 확인해 주세요.";
+        status.classList.add("error");
+      } finally {
+        button.disabled = false;
+      }
+    }
+
+    function downloadAnswers() {
+      const payload = buildPayload();
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `${payload.routeId}-${Date.now()}-answers.json`;
+      link.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      }[char]));
+    }
+
+    window.addEventListener("hashchange", resolveRoute);
+    resolveRoute();
+  </script>
 </body>
 </html>
